@@ -1,0 +1,4 @@
+dreamgaussian/logs
+dreamgaussian/diff-gaussian-rasterization
+**/build
+**/*.egg-info
