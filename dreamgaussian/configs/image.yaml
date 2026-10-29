@@ -82,3 +82,5 @@ densify_grad_threshold: 0.01
 ### Textured Mesh
 geom_lr: 0.0001
 texture_lr: 0.2
+# seed for command-line runs (reproducible baseline vs. improvement)
+seed: 0

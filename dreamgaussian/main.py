@@ -25,7 +25,8 @@ class GUI:
         self.cam = OrbitCamera(opt.W, opt.H, r=opt.radius, fovy=opt.fovy)
 
         self.mode = "image"
-        self.seed = "random"
+        self.seed = str(self.opt.get("seed", "random"))  # seed from config or CLI; "random" if the config has none
+        self.seed_everything()  # seed command-line runs before anything random happens
 
         self.buffer_image = np.ones((self.W, self.H, 3), dtype=np.float32)
         self.need_update = True  # update buffer_image
@@ -99,7 +100,7 @@ class GUI:
         torch.manual_seed(seed)
         torch.cuda.manual_seed(seed)
         torch.backends.cudnn.deterministic = True
-        torch.backends.cudnn.benchmark = True
+        torch.backends.cudnn.benchmark = False
 
         self.last_seed = seed
 
