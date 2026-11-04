@@ -11,3 +11,7 @@ Every change to shared code: date, who, what, why.
 ## 2026-10-28 — Steven (2)
 - scripts/run_batch.py (new, ours): runs stage 1 + 2 over images x seeds; logs time, peak VRAM, Gaussian count, mesh v/f to results/<tag>_log.csv. Authors' scripts/runall.py untouched.
 - Smoke test (anya, seed 0): 65 s total, 24,673 final Gaussians, stage 2 keeps the mesh unchanged.
+
+## 2026-11-03 — Steven (3): 
+- added `scripts/image_prep.py` (render / sheet / process for GSO inputs) 
+- added `scripts/eval_clip.py` (CLIP similarity → `results/metrics.csv`).
