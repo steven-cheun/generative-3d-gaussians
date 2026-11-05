@@ -7,7 +7,7 @@ trex,Dino_3,0_0,animal; side view; thin arms and tail
 yoshi,Nintendo_Yoshi_Action_Figure,0_0,character figure; face; thin arms
 cats,Objects,0_0,TWO figurines (white + black); glossy/reflective (hard case)
 giraffe,Ortho_Forward_Facing,0_0,plush toy; face; soft texture
-cartridge,Pokemon_Yellow_Special_Pikachu_Edition_Nintendo_Game_Boy_Color,0_0,thin flat object; printed label; original GSO folder name has an accented e, renamed to ASCII (Windows OpenCV cannot open accented paths)
+cartridge,Pokemon_Yellow_Special_Pikachu_Edition_Nintendo_Game_Boy_Color,0_0,thin flat object; printed label; original GSO folder name has an accented e; renamed to ASCII (Windows OpenCV cannot open accented paths)
 headset_box,Razer_Kraken_71_Chroma_headset_Full_size_Black,0_0,box; printed text and photo (label case)
 lion,Schleich_Lion_Action_Figure,0_0,animal; side view; mane; thin legs and tail
 shark,Shark,0_0,plush; 0_0 = head-on; body length hidden (hard case)

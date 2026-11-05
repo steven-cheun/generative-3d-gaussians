@@ -23,3 +23,8 @@ Every change to shared code: date, who, what, why.
 - Note: shark and orca are small in the head-on render, so their inputs are upscaled about 2x and a bit soft.
 - 2026-11-04 — Steven: scripts/clip_sim.py = copy of the authors' kiui/cli/clip_sim.py, fixed for transformers 5 (features computed as vision model -> projection; same math). eval_clip.py now uses it, passes --force_cuda_rast, retries failed rows, requires --tag.
 - 2026-11-04 — Steven: scripts/clip_sim.py = copy of the authors' kiui/cli/clip_sim.py, fixed for transformers 5 (features computed as vision model -> projection; same math). eval_clip.py now uses it, passes --force_cuda_rast, retries failed rows, requires --tag.
+
+## 2026-11-05 - Hector
+- notebooks/04_evaluation.ipynb (new): baseline analysis of the GSO test set. Joins results/metrics.csv with results/baseline_log.csv, per-object CLIP mean and seed std, per-group table (standard, head-on, flat/printed, two figurines), overall mean vs the paper's 0.738, two figures. Section 8 pairs baseline vs improved runs automatically once improved rows exist. CPU only. Figures and table CSVs are written to figures/ (not committed; uploaded to the Drive).
+- Tag mismatch found: metrics.csv tags the GSO runs `gso_baseline`, but baseline_log.csv tags them `baseline`, the same tag as the 24 mini-baseline runs. The notebook works around it by keeping only test-set objects from the log and joining on (name, seed). For the improved runs, please use matching tags in both files.
+- data/gso_inputs/objects.csv: removed a comma from the `cartridge` notes (my 11/3 edit). It split the row into 5 fields, so pandas could not read the file. image_prep.py was not affected.
