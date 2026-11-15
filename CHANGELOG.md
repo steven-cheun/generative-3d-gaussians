@@ -31,3 +31,7 @@ Every change to shared code: date, who, what, why.
 
 ## 2026-11-09 - Hector
 - notebooks/05_failures.ipynb (new): failure analysis of the GSO baseline. Stage 1 mesh = final mesh in all 42 runs (stage 2 only changes texture). The 3 worst objects (cartridge, headset_box, turtle) hit the 100k face decimation cap in 9 of 9 runs; across 14 objects, mesh size vs CLIP Spearman rho -0.87. Tags per object from the seed 0 videos using the failure-notes categories (plus a new MISS tag), and a "usable angles out of 8" human check next to CLIP (rho 0.56). CPU only. Figures, tables and contact sheets go to figures/ (not committed; uploaded to the Drive). Write-up: failure-notes-part3.md on the Drive.
+
+## 2026-11-14 — Steven
+- scripts/pair_prep.py (new): inputs for the two-view experiment. Outline from kire depth renders (render_d/, background = 0) instead of rembg, which cut white parts touching the white background (yoshi 0_90 eyes became holes). Writes data/gso_inputs_2v (front + side, one shared zoom), data/gso_inputs_side (side-only control, own zoom), data/gso_inputs_exact (front, own zoom, exact outline).
+- Shared zoom shrinks the front to 55-66% of its usual size for orca, shark, turtle (long side must fit).
