@@ -32,6 +32,14 @@ lambda_zero123: 1
 warmup_rgb_loss: True
 # training batch size per iter
 batch_size: 1
+
+### Two-view (ours) -- see scripts/pair_prep.py and CHANGELOG.md
+# second reference photo; null = baseline (one photo). "auto" = input with _rgba.png -> _side.png
+side_input: null
+# azimuth of the side photo (0_90 render = 90: camera moved to the viewer's right)
+side_azimuth: 90
+# which photo Zero123 is conditioned on: front (2V-a) | nearest (2V-b, closest photo to the random view)
+zero123_cond: front
 # training iterations for stage 1
 iters: 500
 # whether to linearly anneal timestep

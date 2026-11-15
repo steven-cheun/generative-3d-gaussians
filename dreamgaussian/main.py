@@ -16,6 +16,11 @@ from gs_renderer import Renderer, MiniCam
 from grid_put import mipmap_linear_grid_put_2d
 from mesh import Mesh, safe_normalize
 
+
+def wrap180(deg):
+    """two-view (ours): map any angle to [-180, 180), e.g. 270 -> -90, -200 -> 160."""
+    return (deg + 180) % 360 - 180
+
 class GUI:
     def __init__(self, opt):
         self.opt = opt  # shared with the trainer's opt to support in-place modification of rendering parameters.
@@ -66,6 +71,17 @@ class GUI:
         # load input data from cmdline
         if self.opt.input is not None:
             self.load_input(self.opt.input)
+
+        # two-view (ours): optional second reference photo. side_input: null = baseline.
+        # "auto" = the input path with _rgba.png -> _side.png (what pair_prep.py writes).
+        self.side_img, self.side_mask = None, None
+        side_path = self.opt.get("side_input", None)
+        if side_path is not None and self.opt.input is not None:
+            if side_path == "auto":
+                side_path = self.opt.input.replace("_rgba.png", "_side.png")
+            self.side_img, self.side_mask = self.read_rgba(side_path)
+        self.zero123_cond = str(self.opt.get("zero123_cond", "front"))
+        assert self.zero123_cond in ("front", "nearest"), f"zero123_cond must be front or nearest, got {self.zero123_cond}"
         
         # override prompt from cmdline
         if self.opt.prompt is not None:
@@ -168,6 +184,27 @@ class GUI:
             self.input_mask_torch = torch.from_numpy(self.input_mask).permute(2, 0, 1).unsqueeze(0).to(self.device)
             self.input_mask_torch = F.interpolate(self.input_mask_torch, (self.opt.ref_size, self.opt.ref_size), mode="bilinear", align_corners=False)
 
+        # two-view (ours): one entry per reference photo = (camera, image, mask, azimuth).
+        # Baseline: only the front photo at azimuth 0 -> train_step behaves exactly as before.
+        self.ref_views = []
+        if self.input_img is not None:
+            self.ref_views.append((self.fixed_cam, self.input_img_torch, self.input_mask_torch, 0.0))
+        if self.side_img is not None:
+            assert not (self.opt.mvdream or self.opt.imagedream), "two-view only supports zero123 image mode"
+            side_az = float(self.opt.get("side_azimuth", 90))
+            # same elevation, distance and lens as the front camera: the photos share one zoom (pair_prep.py)
+            side_cam = MiniCam(
+                orbit_camera(self.opt.elevation, side_az, self.opt.radius),
+                self.opt.ref_size, self.opt.ref_size,
+                self.cam.fovy, self.cam.fovx, self.cam.near, self.cam.far,
+            )
+            side_img_torch = torch.from_numpy(self.side_img).permute(2, 0, 1).unsqueeze(0).to(self.device)
+            side_img_torch = F.interpolate(side_img_torch, (self.opt.ref_size, self.opt.ref_size), mode="bilinear", align_corners=False)
+            side_mask_torch = torch.from_numpy(self.side_mask).permute(2, 0, 1).unsqueeze(0).to(self.device)
+            side_mask_torch = F.interpolate(side_mask_torch, (self.opt.ref_size, self.opt.ref_size), mode="bilinear", align_corners=False)
+            self.ref_views.append((side_cam, side_img_torch, side_mask_torch, side_az))
+            print(f"[INFO] two-view: side photo at azimuth {side_az}, zero123_cond={self.zero123_cond}")
+
         # prepare embeddings
         with torch.no_grad():
 
@@ -179,6 +216,15 @@ class GUI:
 
             if self.enable_zero123:
                 self.guidance_zero123.get_img_embeds(self.input_img_torch)
+                # two-view (ours), 2V-b: remember Zero123's conditioning for each photo, keyed by azimuth.
+                # get_img_embeds() overwrites guidance.embeddings, so store each result and reset to the front.
+                self.zero123_embs = [(0.0, self.guidance_zero123.embeddings)]
+                if self.zero123_cond == "nearest" and len(self.ref_views) > 1:
+                    assert self.opt.batch_size == 1, "zero123_cond=nearest picks one photo per step: needs batch_size 1"
+                    for _, img, _, az in self.ref_views[1:]:
+                        self.guidance_zero123.get_img_embeds(img)
+                        self.zero123_embs.append((az, self.guidance_zero123.embeddings))
+                    self.guidance_zero123.embeddings = self.zero123_embs[0][1]
 
     def train_step(self):
         starter = torch.cuda.Event(enable_timing=True)
@@ -195,18 +241,17 @@ class GUI:
 
             loss = 0
 
-            ### known view
+            ### known view(s)
+            # two-view (Steven): one pass per reference photo. Baseline: ref_views has only the
+            # front photo, so this runs once with exactly the original numbers.
             if self.input_img_torch is not None and not self.opt.imagedream:
-                cur_cam = self.fixed_cam
-                out = self.renderer.render(cur_cam)
-
-                # rgb loss
-                image = out["image"].unsqueeze(0) # [1, 3, H, W] in [0, 1]
-                loss = loss + 10000 * (step_ratio if self.opt.warmup_rgb_loss else 1) * F.mse_loss(image, self.input_img_torch)
-
-                # mask loss
-                mask = out["alpha"].unsqueeze(0) # [1, 1, H, W] in [0, 1]
-                loss = loss + 1000 * (step_ratio if self.opt.warmup_rgb_loss else 1) * F.mse_loss(mask, self.input_mask_torch)
+                w = step_ratio if self.opt.warmup_rgb_loss else 1
+                for cam, img, mask, _ in self.ref_views:
+                    out = self.renderer.render(cam)
+                    image = out["image"].unsqueeze(0)  # [1, 3, H, W] render
+                    alpha = out["alpha"].unsqueeze(0)  # [1, 1, H, W] render's outline
+                    loss = loss + 10000 * w * F.mse_loss(image, img)    # rgb loss
+                    loss = loss + 1000 * w * F.mse_loss(alpha, mask)    # mask loss
 
             ### novel view (manual batch)
             render_resolution = 128 if step_ratio < 0.3 else (256 if step_ratio < 0.6 else 512)
@@ -268,7 +313,14 @@ class GUI:
                     loss = loss + self.opt.lambda_sd * self.guidance_sd.train_step(images, step_ratio=step_ratio if self.opt.anneal_timestep else None)
 
             if self.enable_zero123:
-                loss = loss + self.opt.lambda_zero123 * self.guidance_zero123.train_step(images, vers, hors, radii, step_ratio=step_ratio if self.opt.anneal_timestep else None, default_elevation=self.opt.elevation)
+                zero123_hors = hors
+                if self.zero123_cond == "nearest" and len(self.zero123_embs) > 1:
+                    # 2V-b (ours): condition Zero123 on the photo whose azimuth is closest to this random view.
+                    # Zero123 is told "rotate by x degrees FROM THE PHOTO", so the angle becomes relative to it.
+                    ref_az, emb = min(self.zero123_embs, key=lambda e: abs(wrap180(hors[0] - e[0])))
+                    self.guidance_zero123.embeddings = emb
+                    zero123_hors = [wrap180(h - ref_az) for h in hors]
+                loss = loss + self.opt.lambda_zero123 * self.guidance_zero123.train_step(images, vers, zero123_hors, radii, step_ratio=step_ratio if self.opt.anneal_timestep else None, default_elevation=self.opt.elevation)
             
             # optimize step
             loss.backward()
@@ -377,6 +429,20 @@ class GUI:
             )  # buffer must be contiguous, else seg fault!
 
     
+    def read_rgba(self, file):
+        """two-view (ours): load the side photo exactly like load_input() treats the front
+        (resize to W x H, white background, BGR -> RGB), but require an RGBA png: no rembg."""
+        print(f'[INFO] load side image from {file}...')
+        img = cv2.imread(file, cv2.IMREAD_UNCHANGED)
+        if img is None or img.ndim != 3 or img.shape[-1] != 4:
+            raise ValueError(f"side image must be an RGBA png: {file}")
+        img = cv2.resize(img, (self.W, self.H), interpolation=cv2.INTER_AREA)
+        img = img.astype(np.float32) / 255.0
+        mask = img[..., 3:]
+        rgb = img[..., :3] * mask + (1 - mask)
+        rgb = rgb[..., ::-1].copy()
+        return rgb, mask
+
     def load_input(self, file):
         # load image
         print(f'[INFO] load image from {file}...')
