@@ -1,0 +1,52 @@
+=== Sun Nov 15 03:54:41 UTC 2026 start
+42 runs (14 images x seeds [0, 1, 2]) | tag=gso_2va | commit=efef559
+Idle GPU memory before runs: 2621 MiB | outputs: dreamgaussian/logs/gso_2va/ | log: /workspace/generative-3d-gaussians/results/gso_2va_log.csv
+[1/42] android seed 0 ... ok | 70.3 s | 36582 Gaussians
+[2/42] android seed 1 ... ok | 63.2 s | 37843 Gaussians
+[3/42] android seed 2 ... ok | 69.3 s | 37739 Gaussians
+[4/42] cartridge seed 0 ... ok | 70.0 s | 46678 Gaussians
+[5/42] cartridge seed 1 ... ok | 67.2 s | 46056 Gaussians
+[6/42] cartridge seed 2 ... ok | 65.4 s | 43067 Gaussians
+[7/42] cats seed 0 ... ok | 58.6 s | 37199 Gaussians
+[8/42] cats seed 1 ... ok | 59.4 s | 38059 Gaussians
+[9/42] cats seed 2 ... ok | 58.5 s | 38063 Gaussians
+[10/42] cups seed 0 ... ok | 56.8 s | 20406 Gaussians
+[11/42] cups seed 1 ... ok | 57.6 s | 21091 Gaussians
+[12/42] cups seed 2 ... ok | 56.6 s | 20933 Gaussians
+[13/42] giraffe seed 0 ... ok | 65.0 s | 48292 Gaussians
+[14/42] giraffe seed 1 ... ok | 66.6 s | 51219 Gaussians
+[15/42] giraffe seed 2 ... ok | 65.8 s | 49300 Gaussians
+[16/42] headset_box seed 0 ... ok | 78.8 s | 47512 Gaussians
+[17/42] headset_box seed 1 ... ok | 77.2 s | 47477 Gaussians
+[18/42] headset_box seed 2 ... ok | 76.7 s | 46618 Gaussians
+[19/42] horse seed 0 ... ok | 58.4 s | 33239 Gaussians
+[20/42] horse seed 1 ... ok | 58.1 s | 32715 Gaussians
+[21/42] horse seed 2 ... ok | 58.9 s | 33241 Gaussians
+[22/42] lion seed 0 ... ok | 59.8 s | 41746 Gaussians
+[23/42] lion seed 1 ... ok | 60.1 s | 42171 Gaussians
+[24/42] lion seed 2 ... ok | 62.0 s | 41643 Gaussians
+[25/42] orca seed 0 ... ok | 58.5 s | 22862 Gaussians
+[26/42] orca seed 1 ... ok | 57.3 s | 22125 Gaussians
+[27/42] orca seed 2 ... ok | 57.9 s | 21081 Gaussians
+[28/42] shark seed 0 ... ok | 60.1 s | 39817 Gaussians
+[29/42] shark seed 1 ... ok | 60.5 s | 40773 Gaussians
+[30/42] shark seed 2 ... ok | 60.4 s | 42193 Gaussians
+[31/42] squirrel seed 0 ... ok | 67.8 s | 46069 Gaussians
+[32/42] squirrel seed 1 ... ok | 66.7 s | 48533 Gaussians
+[33/42] squirrel seed 2 ... ok | 66.7 s | 47845 Gaussians
+[34/42] trex seed 0 ... ok | 58.8 s | 33831 Gaussians
+[35/42] trex seed 1 ... ok | 58.6 s | 33808 Gaussians
+[36/42] trex seed 2 ... ok | 57.8 s | 33681 Gaussians
+[37/42] turtle seed 0 ... ok | 70.2 s | 44444 Gaussians
+[38/42] turtle seed 1 ... ok | 69.6 s | 46625 Gaussians
+[39/42] turtle seed 2 ... ok | 69.5 s | 45795 Gaussians
+[40/42] yoshi seed 0 ... ok | 59.7 s | 36939 Gaussians
+[41/42] yoshi seed 1 ... ok | 59.2 s | 38511 Gaussians
+[42/42] yoshi seed 2 ... ok | 59.3 s | 36494 Gaussians
+Done. Results: /workspace/generative-3d-gaussians/results/gso_2va_log.csv
+42 runs (14 images x seeds [0, 1, 2]) | tag=gso_2vb | commit=efef559
+Idle GPU memory before runs: 2019 MiB | outputs: dreamgaussian/logs/gso_2vb/ | log: /workspace/generative-3d-gaussians/results/gso_2vb_log.csv
+[1/42] android seed 0 ... ok | 66.7 s | 31920 Gaussians
+[2/42] android seed 1 ... ok | 67.1 s | 33261 Gaussians
+[3/42] android seed 2 ... ok | 69.8 s | 30046 Gaussians
+[4/42] cartridge seed 0 ... 

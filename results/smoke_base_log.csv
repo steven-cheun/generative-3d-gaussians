@@ -1,0 +1,2 @@
+date,tag,config,commit,image,seed,stage1_s,stage2_s,total_s,vram_stage1_mib,vram_stage2_mib,gaussians_final,mesh1_v,mesh1_f,final_v,final_f,status,extra
+2026-11-15T03:36:51,smoke_base,configs/image.yaml,ea48fbf,shark,0,53.0,16.9,69.9,4224,3227,40162,18471,31156,18471,31156,ok,

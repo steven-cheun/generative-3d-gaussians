@@ -1,0 +1,2 @@
+date,tag,config,commit,image,seed,stage1_s,stage2_s,total_s,vram_stage1_mib,vram_stage2_mib,gaussians_final,mesh1_v,mesh1_f,final_v,final_f,status,extra
+2026-11-15T03:38:02,smoke_2va,configs/image.yaml,ea48fbf,headset_box,0,54.9,17.3,72.2,3567,3270,48962,50952,82318,50952,82318,ok,side_input=auto

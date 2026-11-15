@@ -1,0 +1,2 @@
+date,tag,config,commit,image,seed,stage1_s,stage2_s,total_s,vram_stage1_mib,vram_stage2_mib,gaussians_final,mesh1_v,mesh1_f,final_v,final_f,status,extra
+2026-11-15T03:39:01,smoke_2vb,configs/image.yaml,ea48fbf,shark,0,42.4,16.7,59.1,5236,3210,39009,14138,24706,14138,24706,ok,side_input=auto zero123_cond=nearest
