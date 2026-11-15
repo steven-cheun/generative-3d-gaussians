@@ -89,6 +89,7 @@ if __name__ == '__main__':
 
     # render from random views and evaluate similarity
     results = []
+    angles = []
 
     elevation = [opt.elevation,]
     azimuth = np.linspace(0, 360, opt.num_azimuth, dtype=np.int32, endpoint=False)
@@ -105,6 +106,10 @@ if __name__ == '__main__':
             similarity = (ref_features * cur_features).sum(dim=-1).mean().item()
 
             results.append(similarity)
+            angles.append(int(azi))  # ADDED (ours): remember which angle each score belongs to
 
+    # ADDED (ours): per-angle scores on one line, so eval_clip.py can drop angles that were
+    # training photos (two-view: 90). The average stays the LAST line, as before.
+    print("PER_ANGLE " + " ".join(f"{a}:{r:.4f}" for a, r in zip(angles, results)))
     avg_similarity = np.mean(results)
     print(avg_similarity)

@@ -35,7 +35,12 @@ p.add_argument("--stage", type=int, choices=[1, 2], default=2,
 p.add_argument("--out", default="results/metrics.csv")
 args = p.parse_args()
 
-FIELDS = ["tag", "stage", "name", "seed", "mesh", "clip_sim", "seconds", "status"]
+ANGLES = [0, 45, 90, 135, 180, 225, 270, 315]   # clip_sim.py's 8 azimuths
+# clip_sim = paper's 8-angle mean (unchanged). Added 2026-11-14: one column per angle, and
+# clip_heldout = mean WITHOUT 90 and 270 (90 is the side photo in the two-view runs, 270 its mirror).
+# Old rows have these columns empty.
+FIELDS = (["tag", "stage", "name", "seed", "mesh", "clip_sim"]
+          + [f"clip_{a}" for a in ANGLES] + ["clip_heldout", "seconds", "status"])
 SCORER = os.path.join(os.path.dirname(os.path.abspath(__file__)), "clip_sim.py")
 
 # --- resume: keep only successful rows, so failures get retried -------------
@@ -86,16 +91,26 @@ for img in inputs:
 
         # the scorer prints the average similarity as its last line
         lines = [l.strip() for l in res.stdout.strip().splitlines() if l.strip()]
+        per_angle = {}
         try:
             score, status = round(float(lines[-1]), 4), "ok"
+            # per-angle line: "PER_ANGLE 0:0.8123 45:0.7710 ..."
+            pa = [l for l in lines if l.startswith("PER_ANGLE ")]
+            if pa:
+                per_angle = {int(k): float(v) for k, v in (t.split(":") for t in pa[-1].split()[1:])}
             n_ok += 1
         except (IndexError, ValueError):
             score, status = "", "error"
             n_err += 1
             print(res.stderr[-1500:])  # show why (e.g. CUDA out of memory)
 
-        writer.writerow(dict(tag=args.tag, stage=args.stage, name=name, seed=seed,
-                             mesh=mesh, clip_sim=score, seconds=secs, status=status))
+        row = dict(tag=args.tag, stage=args.stage, name=name, seed=seed,
+                   mesh=mesh, clip_sim=score, seconds=secs, status=status)
+        for a in ANGLES:
+            row[f"clip_{a}"] = round(per_angle[a], 4) if a in per_angle else ""
+        held = [per_angle[a] for a in ANGLES if a in per_angle and a not in (90, 270)]
+        row["clip_heldout"] = round(sum(held) / len(held), 4) if len(held) == 6 else ""
+        writer.writerow(row)
         out.flush()  # row saved even if the run crashes later
         print(f"{name} seed={seed}  clip_sim={score}  ({secs}s, {status})")
 
