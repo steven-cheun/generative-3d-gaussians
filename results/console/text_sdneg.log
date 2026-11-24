@@ -1,0 +1,254 @@
+=== 04:06:15 text_sdneg_mug_white: a plain white ceramic coffee mug
+/usr/local/lib/python3.12/dist-packages/diffusers/utils/deprecation_utils.py:23: FutureWarning: `torch_dtype` is deprecated and will be removed in version 1.0.0. Please use `dtype` instead.
+  deprecate("torch_dtype", "1.0.0", _TORCH_DTYPE_DEPRECATION_MESSAGE)
+Number of points at initialisation :  5000
+[INFO] loading SD...
+[INFO] using hugging face custom model key: sd2-community/stable-diffusion-2-1-base
+Loading pipeline components...:   0%|          | 0/6 [00:00<?, ?it/s]Loading pipeline components...:  50%|█████     | 3/6 [00:00<00:00, 16.69it/s]
+Loading weights:   0%|          | 0/372 [00:00<?, ?it/s][A
+Loading weights:  24%|██▎       | 88/372 [00:00<00:00, 871.41it/s][A
+Loading weights:  49%|████▉     | 184/372 [00:00<00:00, 892.45it/s][A
+Loading weights:  78%|███████▊  | 290/372 [00:00<00:00, 966.32it/s][ALoading weights: 100%|██████████| 372/372 [00:00<00:00, 957.71it/s]
+Loading pipeline components...:  83%|████████▎ | 5/6 [00:00<00:00,  6.25it/s]Loading pipeline components...: 100%|██████████| 6/6 [00:01<00:00,  3.58it/s]Loading pipeline components...: 100%|██████████| 6/6 [00:01<00:00,  4.51it/s]
+/usr/local/lib/python3.12/dist-packages/huggingface_hub/utils/_validators.py:206: UserWarning: The `local_dir_use_symlinks` argument is deprecated and ignored in `hf_hub_download`. Downloading to a local directory does not use symlinks anymore.
+  warnings.warn(
+[INFO] loaded SD!
+  0%|          | 0/500 [00:00<?, ?it/s]  0%|          | 1/500 [00:00<03:54,  2.13it/s]  0%|          | 2/500 [00:00<02:22,  3.50it/s]  1%|          | 3/500 [00:00<01:52,  4.41it/s]  1%|          | 4/500 [00:00<01:38,  5.02it/s]  1%|          | 5/500 [00:01<01:31,  5.43it/s]  1%|          | 6/500 [00:01<01:26,  5.73it/s]  1%|▏         | 7/500 [00:01<01:23,  5.91it/s]  2%|▏         | 8/500 [00:01<01:21,  6.05it/s]  2%|▏         | 9/500 [00:01<01:19,  6.15it/s]  2%|▏         | 10/500 [00:01<01:18,  6.22it/s]  2%|▏         | 11/500 [00:02<01:18,  6.26it/s]  2%|▏         | 12/500 [00:02<01:17,  6.30it/s]  3%|▎         | 13/500 [00:02<01:16,  6.34it/s]  3%|▎         | 14/500 [00:02<01:16,  6.36it/s]  3%|▎         | 15/500 [00:02<01:16,  6.37it/s]  3%|▎         | 16/500 [00:02<01:15,  6.38it/s]  3%|▎         | 17/500 [00:02<01:15,  6.39it/s]  4%|▎         | 18/500 [00:03<01:15,  6.39it/s]  4%|▍         | 19/500 [00:03<01:16,  6.31it/s]  4%|▍         | 20/500 [00:03<01:15,  6.32it/s]  4%|▍         | 21/500 [00:03<01:15,  6.35it/s]  4%|▍         | 22/500 [00:03<01:15,  6.36it/s]  5%|▍         | 23/500 [00:03<01:15,  6.29it/s]  5%|▍         | 24/500 [00:04<01:15,  6.29it/s]  5%|▌         | 25/500 [00:10<16:43,  2.11s/it] 10%|▉         | 48/500 [00:14<02:27,  3.06it/s] 12%|█▏        | 60/500 [00:15<01:51,  3.94it/s] 22%|██▏       | 108/500 [00:16<00:31, 12.61it/s] 23%|██▎       | 117/500 [00:17<00:35, 10.89it/s] 25%|██▍       | 124/500 [00:18<00:38,  9.77it/s] 26%|██▌       | 129/500 [00:25<01:44,  3.55it/s] 33%|███▎      | 163/500 [00:30<01:09,  4.86it/s] 42%|████▏     | 211/500 [00:31<00:28, 10.21it/s] 45%|████▍     | 224/500 [00:33<00:29,  9.22it/s] 47%|████▋     | 234/500 [00:34<00:28,  9.21it/s] 48%|████▊     | 241/500 [00:35<00:29,  8.74it/s] 49%|████▉     | 246/500 [00:36<00:30,  8.34it/s] 50%|█████     | 250/500 [00:36<00:31,  7.97it/s] 51%|█████     | 253/500 [00:37<00:32,  7.72it/s] 51%|█████     | 256/500 [00:37<00:32,  7.47it/s] 52%|█████▏    | 258/500 [00:37<00:33,  7.29it/s] 52%|█████▏    | 260/500 [00:38<00:33,  7.12it/s] 52%|█████▏    | 262/500 [00:38<00:34,  6.96it/s] 53%|█████▎    | 263/500 [00:38<00:34,  6.87it/s] 53%|█████▎    | 264/500 [00:38<00:34,  6.78it/s] 53%|█████▎    | 265/500 [00:39<00:35,  6.68it/s] 53%|█████▎    | 266/500 [00:45<05:24,  1.39s/it] 63%|██████▎   | 314/500 [00:46<00:19,  9.60it/s] 64%|██████▍   | 321/500 [00:47<00:20,  8.80it/s] 65%|██████▌   | 326/500 [00:48<00:20,  8.30it/s] 66%|██████▌   | 330/500 [00:48<00:21,  7.91it/s] 67%|██████▋   | 333/500 [00:49<00:21,  7.63it/s] 67%|██████▋   | 337/500 [00:49<00:18,  8.90it/s] 68%|██████▊   | 340/500 [00:49<00:19,  8.26it/s] 68%|██████▊   | 342/500 [00:50<00:20,  7.87it/s] 69%|██████▉   | 344/500 [00:50<00:20,  7.52it/s] 69%|██████▉   | 346/500 [00:50<00:21,  7.21it/s] 70%|██████▉   | 348/500 [00:51<00:21,  6.95it/s] 70%|██████▉   | 349/500 [00:51<00:22,  6.83it/s] 70%|███████   | 350/500 [00:51<00:22,  6.56it/s] 70%|███████   | 351/500 [00:51<00:23,  6.44it/s] 70%|███████   | 352/500 [00:51<00:23,  6.36it/s] 71%|███████   | 353/500 [00:51<00:23,  6.29it/s] 71%|███████   | 354/500 [00:52<00:23,  6.25it/s] 71%|███████   | 355/500 [00:52<00:23,  6.21it/s] 71%|███████   | 356/500 [00:52<00:23,  6.19it/s] 71%|███████▏  | 357/500 [00:52<00:23,  6.17it/s] 72%|███████▏  | 358/500 [00:52<00:23,  6.16it/s] 72%|███████▏  | 359/500 [00:52<00:22,  6.16it/s] 72%|███████▏  | 360/500 [00:53<00:22,  6.15it/s] 72%|███████▏  | 361/500 [00:53<00:22,  6.15it/s] 72%|███████▏  | 362/500 [00:53<00:22,  6.16it/s] 73%|███████▎  | 363/500 [00:53<00:22,  6.13it/s] 73%|███████▎  | 364/500 [00:53<00:22,  6.13it/s] 73%|███████▎  | 365/500 [00:53<00:21,  6.14it/s] 73%|███████▎  | 366/500 [00:54<00:21,  6.14it/s] 73%|███████▎  | 367/500 [00:54<00:21,  6.15it/s] 74%|███████▎  | 368/500 [01:00<04:39,  2.11s/it] 80%|████████  | 402/500 [01:05<00:26,  3.64it/s] 84%|████████▍ | 421/500 [01:08<00:17,  4.53it/s] 87%|████████▋ | 436/500 [01:10<00:12,  5.08it/s] 94%|█████████▍| 469/500 [01:15<00:05,  5.75it/s]100%|██████████| 500/500 [01:14<00:00,  6.75it/s]
+/usr/local/lib/python3.12/dist-packages/torch/functional.py:505: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at /pytorch/aten/src/ATen/native/TensorShape.cpp:4381.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+[INFO] save model to logs/text_sdneg_mug_white_model.ply.
+Tensor occ torch.Size([128, 128, 128]) torch.float32 cuda:0 ∈ [0.0, 236.510009765625] μ = 3.5210211277008057 σ = 
+10.876626968383789
+/workspace/generative-3d-gaussians/dreamgaussian/mesh.py:348: UserWarning: Using torch.cross without specifying the dim arg is deprecated.
+Please either pass the dim explicitly or simply use torch.linalg.cross.
+The default value of dim will change to agree with that of linalg.cross in a future release. (Triggered internally at /pytorch/aten/src/ATen/native/Cross.cpp:63.)
+  face_normals = torch.cross(v1 - v0, v2 - v0)
+[INFO] mesh cleaning: (64110, 3) --> (44952, 3), (128140, 3) --> (89916, 3)
+[INFO] marching cubes result: torch.Size([44952, 3]) (-0.8798879981040955-0.748811662197113), torch.Size([89916, 3])
+[INFO] unwrap uv...
+[INFO] save model to logs/text_sdneg_mug_white_mesh.obj.
+/workspace/generative-3d-gaussians/dreamgaussian/mesh.py:348: UserWarning: Using torch.cross without specifying the dim arg is deprecated.
+Please either pass the dim explicitly or simply use torch.linalg.cross.
+The default value of dim will change to agree with that of linalg.cross in a future release. (Triggered internally at /pytorch/aten/src/ATen/native/Cross.cpp:63.)
+  face_normals = torch.cross(v1 - v0, v2 - v0)
+/usr/local/lib/python3.12/dist-packages/diffusers/utils/deprecation_utils.py:23: FutureWarning: `torch_dtype` is deprecated and will be removed in version 1.0.0. Please use `dtype` instead.
+  deprecate("torch_dtype", "1.0.0", _TORCH_DTYPE_DEPRECATION_MESSAGE)
+[load_obj] use texture from: logs/text_sdneg_mug_white_mesh_albedo.png
+[load_obj] load texture: (1024, 1024, 3)
+[Mesh loading] v: torch.Size([54803, 3]), f: torch.Size([89916, 3])
+[Mesh loading] vn: torch.Size([54803, 3]), fn: torch.Size([89916, 3])
+[INFO] loading SD...
+[INFO] using hugging face custom model key: sd2-community/stable-diffusion-2-1-base
+Loading pipeline components...:   0%|          | 0/6 [00:00<?, ?it/s]
+Loading weights:   0%|          | 0/372 [00:00<?, ?it/s][A
+Loading weights:  38%|███▊      | 142/372 [00:06<00:11, 20.79it/s][A
+Loading weights:  81%|████████  | 302/372 [00:06<00:01, 53.13it/s][ALoading weights: 100%|██████████| 372/372 [00:06<00:00, 53.39it/s]
+Loading pipeline components...:  50%|█████     | 3/6 [00:00<00:00, 25.68it/s]Loading pipeline components...: 100%|██████████| 6/6 [00:00<00:00, 10.15it/s]Loading pipeline components...: 100%|██████████| 6/6 [00:00<00:00, 11.16it/s]
+/usr/local/lib/python3.12/dist-packages/huggingface_hub/utils/_validators.py:206: UserWarning: The `local_dir_use_symlinks` argument is deprecated and ignored in `hf_hub_download`. Downloading to a local directory does not use symlinks anymore.
+  warnings.warn(
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[INFO] loaded SD!
+  0%|          | 0/50 [00:00<?, ?it/s]  2%|▏         | 1/50 [00:00<00:39,  1.25it/s]  4%|▍         | 2/50 [00:01<00:34,  1.41it/s]  6%|▌         | 3/50 [00:02<00:31,  1.50it/s]  8%|▊         | 4/50 [00:02<00:29,  1.56it/s] 10%|█         | 5/50 [00:03<00:28,  1.60it/s] 12%|█▏        | 6/50 [00:03<00:27,  1.61it/s] 14%|█▍        | 7/50 [00:10<01:57,  2.73s/it] 44%|████▍     | 22/50 [00:11<00:09,  2.84it/s] 50%|█████     | 25/50 [00:12<00:09,  2.69it/s] 56%|█████▌    | 28/50 [00:13<00:08,  2.61it/s] 60%|██████    | 30/50 [00:14<00:06,  2.91it/s] 64%|██████▍   | 32/50 [00:14<00:06,  2.81it/s] 66%|██████▌   | 33/50 [00:15<00:06,  2.76it/s] 68%|██████▊   | 34/50 [00:15<00:05,  2.77it/s] 70%|███████   | 35/50 [00:15<00:05,  2.77it/s] 72%|███████▏  | 36/50 [00:16<00:05,  2.78it/s] 74%|███████▍  | 37/50 [00:16<00:04,  2.78it/s] 76%|███████▌  | 38/50 [00:17<00:04,  2.79it/s] 78%|███████▊  | 39/50 [00:17<00:03,  2.78it/s] 80%|████████  | 40/50 [00:17<00:03,  2.89it/s] 82%|████████▏ | 41/50 [00:18<00:03,  2.98it/s] 84%|████████▍ | 42/50 [00:18<00:02,  3.04it/s] 86%|████████▌ | 43/50 [00:18<00:02,  3.06it/s] 88%|████████▊ | 44/50 [00:18<00:01,  3.10it/s] 90%|█████████ | 45/50 [00:19<00:01,  3.14it/s] 96%|█████████▌| 48/50 [00:19<00:00,  4.88it/s] 98%|█████████▊| 49/50 [00:19<00:00,  4.54it/s]100%|██████████| 50/50 [00:20<00:00,  4.36it/s]100%|██████████| 50/50 [00:20<00:00,  2.48it/s]
+[INFO] save model to logs/text_sdneg_mug_white.obj.
+[INFO] load obj mesh: use texture from: logs/text_sdneg_mug_white_albedo.png
+[INFO] load obj mesh: load texture: (1024, 1024, 3)
+[INFO] load mesh, v: torch.Size([54803, 3]), f: torch.Size([89916, 3])
+[INFO] load mesh, vn: torch.Size([54803, 3]), fn: torch.Size([89916, 3])
+[INFO] load mesh, vt: torch.Size([54803, 2]), ft: torch.Size([89916, 3])
+  0%|          | 0/1 [00:00<?, ?it/s]
+  0%|          | 0/120 [00:00<?, ?it/s][A
+  4%|▍         | 5/120 [00:00<00:02, 49.47it/s][A
+ 12%|█▎        | 15/120 [00:06<00:51,  2.02it/s][A
+ 38%|███▊      | 45/120 [00:06<00:09,  8.27it/s][A100%|██████████| 120/120 [00:00<00:00, 66903.69it/s]
+100%|██████████| 1/1 [00:00<00:00, 482.60it/s]
+=== 04:08:48 text_sdneg_corgi: a corgi
+/usr/local/lib/python3.12/dist-packages/diffusers/utils/deprecation_utils.py:23: FutureWarning: `torch_dtype` is deprecated and will be removed in version 1.0.0. Please use `dtype` instead.
+  deprecate("torch_dtype", "1.0.0", _TORCH_DTYPE_DEPRECATION_MESSAGE)
+Number of points at initialisation :  5000
+[INFO] loading SD...
+[INFO] using hugging face custom model key: sd2-community/stable-diffusion-2-1-base
+Loading pipeline components...:   0%|          | 0/6 [00:00<?, ?it/s]
+Loading weights:   0%|          | 0/372 [00:00<?, ?it/s][A
+Loading weights:  35%|███▍      | 129/372 [00:06<00:12, 19.57it/s][A
+Loading weights:  80%|███████▉  | 296/372 [00:06<00:01, 54.58it/s][ALoading weights: 100%|██████████| 372/372 [00:06<00:00, 55.25it/s]
+Loading pipeline components...:  67%|██████▋   | 4/6 [00:00<00:00, 28.79it/s]Loading pipeline components...: 100%|██████████| 6/6 [00:00<00:00, 34.38it/s]
+/usr/local/lib/python3.12/dist-packages/huggingface_hub/utils/_validators.py:206: UserWarning: The `local_dir_use_symlinks` argument is deprecated and ignored in `hf_hub_download`. Downloading to a local directory does not use symlinks anymore.
+  warnings.warn(
+[INFO] loaded SD!
+  0%|          | 0/500 [00:00<?, ?it/s]  0%|          | 1/500 [00:00<04:07,  2.02it/s]  0%|          | 2/500 [00:00<02:27,  3.38it/s]  1%|          | 3/500 [00:00<01:55,  4.31it/s]  1%|          | 4/500 [00:00<01:40,  4.95it/s]  1%|          | 5/500 [00:01<01:31,  5.39it/s]  1%|          | 6/500 [00:01<01:26,  5.69it/s]  1%|▏         | 7/500 [00:01<01:23,  5.90it/s]  2%|▏         | 8/500 [00:01<01:21,  6.04it/s]  2%|▏         | 9/500 [00:01<01:19,  6.14it/s]  2%|▏         | 10/500 [00:01<01:18,  6.22it/s]  2%|▏         | 11/500 [00:02<01:17,  6.27it/s]  2%|▏         | 12/500 [00:02<01:17,  6.31it/s]  3%|▎         | 13/500 [00:02<01:16,  6.34it/s]  3%|▎         | 14/500 [00:02<01:16,  6.36it/s]  3%|▎         | 15/500 [00:02<01:16,  6.37it/s]  3%|▎         | 16/500 [00:02<01:15,  6.37it/s]  3%|▎         | 17/500 [00:02<01:15,  6.38it/s]  4%|▎         | 18/500 [00:03<01:15,  6.39it/s]  4%|▍         | 19/500 [00:03<01:15,  6.39it/s]  4%|▍         | 20/500 [00:03<01:15,  6.39it/s]  4%|▍         | 21/500 [00:03<01:14,  6.40it/s]  4%|▍         | 22/500 [00:03<01:14,  6.40it/s]  5%|▍         | 23/500 [00:03<01:14,  6.39it/s]  5%|▍         | 24/500 [00:04<01:14,  6.37it/s]  5%|▌         | 25/500 [00:04<01:14,  6.37it/s]  5%|▌         | 26/500 [00:04<01:14,  6.39it/s]  5%|▌         | 27/500 [00:11<16:39,  2.11s/it] 12%|█▏        | 62/500 [00:16<01:57,  3.73it/s] 19%|█▉        | 97/500 [00:21<01:19,  5.09it/s] 26%|██▌       | 131/500 [00:26<01:04,  5.74it/s] 29%|██▊       | 143/500 [00:27<01:00,  5.92it/s] 33%|███▎      | 166/500 [00:31<00:53,  6.22it/s] 40%|████      | 200/500 [00:36<00:46,  6.50it/s] 47%|████▋     | 235/500 [00:41<00:39,  6.66it/s] 57%|█████▋    | 283/500 [00:41<00:19, 11.37it/s] 58%|█████▊    | 291/500 [00:42<00:19, 10.59it/s] 59%|█████▉    | 297/500 [00:43<00:20,  9.99it/s] 60%|██████    | 302/500 [00:44<00:21,  9.41it/s] 61%|██████    | 306/500 [00:44<00:19, 10.09it/s] 62%|██████▏   | 310/500 [00:45<00:20,  9.38it/s] 63%|██████▎   | 313/500 [00:45<00:21,  8.85it/s] 63%|██████▎   | 315/500 [00:45<00:21,  8.49it/s] 63%|██████▎   | 317/500 [00:46<00:22,  8.13it/s] 64%|██████▍   | 319/500 [00:46<00:23,  7.77it/s] 64%|██████▍   | 321/500 [00:46<00:24,  7.45it/s] 64%|██████▍   | 322/500 [00:47<00:24,  7.29it/s] 65%|██████▍   | 323/500 [00:47<00:24,  7.12it/s] 65%|██████▍   | 324/500 [00:47<00:25,  6.95it/s] 65%|██████▌   | 325/500 [00:47<00:25,  6.80it/s] 65%|██████▌   | 326/500 [00:47<00:26,  6.68it/s] 65%|██████▌   | 327/500 [00:47<00:26,  6.57it/s] 66%|██████▌   | 328/500 [00:48<00:26,  6.47it/s] 66%|██████▌   | 329/500 [00:48<00:26,  6.42it/s] 66%|██████▌   | 330/500 [00:48<00:26,  6.38it/s] 66%|██████▌   | 331/500 [00:55<05:41,  2.02s/it] 68%|██████▊   | 338/500 [00:56<01:43,  1.57it/s] 74%|███████▍  | 372/500 [01:01<00:29,  4.39it/s] 84%|████████▍ | 420/500 [01:01<00:06, 11.46it/s] 86%|████████▌ | 428/500 [01:02<00:06, 10.29it/s] 87%|████████▋ | 434/500 [01:03<00:06,  9.53it/s] 88%|████████▊ | 439/500 [01:04<00:06,  8.93it/s] 89%|████████▊ | 443/500 [01:04<00:05,  9.76it/s] 89%|████████▉ | 446/500 [01:05<00:05,  9.13it/s] 90%|████████▉ | 449/500 [01:05<00:05,  8.54it/s] 90%|█████████ | 451/500 [01:05<00:06,  8.06it/s] 91%|█████████ | 453/500 [01:06<00:06,  7.71it/s] 91%|█████████ | 455/500 [01:06<00:06,  7.40it/s] 91%|█████████▏| 457/500 [01:06<00:06,  7.00it/s] 92%|█████████▏| 458/500 [01:07<00:06,  6.88it/s] 92%|█████████▏| 459/500 [01:07<00:06,  6.77it/s] 92%|█████████▏| 460/500 [01:07<00:06,  6.66it/s] 92%|█████████▏| 461/500 [01:07<00:05,  6.56it/s] 92%|█████████▏| 462/500 [01:07<00:05,  6.47it/s] 93%|█████████▎| 463/500 [01:07<00:05,  6.40it/s] 93%|█████████▎| 464/500 [01:08<00:05,  6.35it/s] 93%|█████████▎| 465/500 [01:08<00:05,  6.30it/s] 93%|█████████▎| 466/500 [01:08<00:05,  6.27it/s] 93%|█████████▎| 467/500 [01:08<00:05,  6.24it/s] 94%|█████████▎| 468/500 [01:08<00:05,  6.24it/s] 94%|█████████▍| 469/500 [01:08<00:04,  6.24it/s] 94%|█████████▍| 470/500 [01:08<00:04,  6.22it/s] 94%|█████████▍| 471/500 [01:09<00:04,  6.21it/s] 94%|█████████▍| 472/500 [01:09<00:04,  6.21it/s] 95%|█████████▍| 473/500 [01:09<00:04,  6.20it/s] 95%|█████████▍| 474/500 [01:16<00:54,  2.11s/it]100%|██████████| 500/500 [01:13<00:00,  6.81it/s]
+/usr/local/lib/python3.12/dist-packages/torch/functional.py:505: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at /pytorch/aten/src/ATen/native/TensorShape.cpp:4381.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+[INFO] save model to logs/text_sdneg_corgi_model.ply.
+Tensor occ torch.Size([128, 128, 128]) torch.float32 cuda:0 ∈ [0.0, 291.619140625] μ = 4.395325183868408 σ = 
+13.970416069030762
+/workspace/generative-3d-gaussians/dreamgaussian/mesh.py:348: UserWarning: Using torch.cross without specifying the dim arg is deprecated.
+Please either pass the dim explicitly or simply use torch.linalg.cross.
+The default value of dim will change to agree with that of linalg.cross in a future release. (Triggered internally at /pytorch/aten/src/ATen/native/Cross.cpp:63.)
+  face_normals = torch.cross(v1 - v0, v2 - v0)
+[INFO] mesh cleaning: (67054, 3) --> (51975, 3), (134116, 3) --> (103986, 3)
+[INFO] mesh decimation: (51975, 3) --> (49982, 3), (103986, 3) --> (100000, 3)
+[INFO] marching cubes result: torch.Size([49982, 3]) (-0.9529724717140198-0.8843041658401489), torch.Size([100000, 3])
+[INFO] unwrap uv...
+[INFO] save model to logs/text_sdneg_corgi_mesh.obj.
+/workspace/generative-3d-gaussians/dreamgaussian/mesh.py:348: UserWarning: Using torch.cross without specifying the dim arg is deprecated.
+Please either pass the dim explicitly or simply use torch.linalg.cross.
+The default value of dim will change to agree with that of linalg.cross in a future release. (Triggered internally at /pytorch/aten/src/ATen/native/Cross.cpp:63.)
+  face_normals = torch.cross(v1 - v0, v2 - v0)
+/usr/local/lib/python3.12/dist-packages/diffusers/utils/deprecation_utils.py:23: FutureWarning: `torch_dtype` is deprecated and will be removed in version 1.0.0. Please use `dtype` instead.
+  deprecate("torch_dtype", "1.0.0", _TORCH_DTYPE_DEPRECATION_MESSAGE)
+[load_obj] use texture from: logs/text_sdneg_corgi_mesh_albedo.png
+[load_obj] load texture: (1024, 1024, 3)
+[Mesh loading] v: torch.Size([60988, 3]), f: torch.Size([100000, 3])
+[Mesh loading] vn: torch.Size([60988, 3]), fn: torch.Size([100000, 3])
+[INFO] loading SD...
+[INFO] using hugging face custom model key: sd2-community/stable-diffusion-2-1-base
+Loading pipeline components...:   0%|          | 0/6 [00:00<?, ?it/s]
+Loading weights:   0%|          | 0/372 [00:00<?, ?it/s][A
+Loading weights:  46%|████▌     | 170/372 [00:00<00:00, 1688.98it/s][A
+Loading weights:  94%|█████████▍| 350/372 [00:00<00:00, 1749.19it/s][ALoading weights: 100%|██████████| 372/372 [00:00<00:00, 1738.75it/s]
+Loading pipeline components...:  17%|█▋        | 1/6 [00:00<00:01,  3.38it/s]Loading pipeline components...:  67%|██████▋   | 4/6 [00:00<00:00,  6.67it/s]Loading pipeline components...: 100%|██████████| 6/6 [00:00<00:00,  8.96it/s]
+/usr/local/lib/python3.12/dist-packages/huggingface_hub/utils/_validators.py:206: UserWarning: The `local_dir_use_symlinks` argument is deprecated and ignored in `hf_hub_download`. Downloading to a local directory does not use symlinks anymore.
+  warnings.warn(
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[INFO] loaded SD!
+  0%|          | 0/50 [00:00<?, ?it/s]  2%|▏         | 1/50 [00:00<00:37,  1.30it/s]  4%|▍         | 2/50 [00:01<00:32,  1.50it/s]  6%|▌         | 3/50 [00:01<00:30,  1.55it/s]  8%|▊         | 4/50 [00:02<00:29,  1.57it/s] 10%|█         | 5/50 [00:03<00:29,  1.54it/s] 12%|█▏        | 6/50 [00:03<00:20,  2.12it/s] 14%|█▍        | 7/50 [00:03<00:21,  1.99it/s] 16%|█▌        | 8/50 [00:04<00:21,  1.93it/s] 18%|█▊        | 9/50 [00:05<00:21,  1.88it/s] 20%|██        | 10/50 [00:05<00:21,  1.85it/s] 22%|██▏       | 11/50 [00:06<00:21,  1.80it/s] 24%|██▍       | 12/50 [00:06<00:21,  1.78it/s] 26%|██▌       | 13/50 [00:07<00:20,  1.78it/s] 28%|██▊       | 14/50 [00:07<00:19,  1.84it/s] 30%|███       | 15/50 [00:14<01:27,  2.50s/it] 64%|██████▍   | 32/50 [00:15<00:05,  3.24it/s] 72%|███████▏  | 36/50 [00:16<00:04,  3.07it/s] 78%|███████▊  | 39/50 [00:17<00:03,  2.99it/s] 82%|████████▏ | 41/50 [00:24<00:07,  1.18it/s]100%|██████████| 50/50 [00:20<00:00,  2.45it/s]
+[INFO] save model to logs/text_sdneg_corgi.obj.
+[INFO] load obj mesh: use texture from: logs/text_sdneg_corgi_albedo.png
+[INFO] load obj mesh: load texture: (1024, 1024, 3)
+[INFO] load mesh, v: torch.Size([60988, 3]), f: torch.Size([100000, 3])
+[INFO] load mesh, vn: torch.Size([60988, 3]), fn: torch.Size([100000, 3])
+[INFO] load mesh, vt: torch.Size([60988, 2]), ft: torch.Size([100000, 3])
+  0%|          | 0/1 [00:00<?, ?it/s]
+  0%|          | 0/120 [00:00<?, ?it/s][A
+  8%|▊         | 9/120 [00:00<00:01, 88.27it/s][A
+ 37%|███▋      | 44/120 [00:00<00:00, 237.82it/s][A
+ 64%|██████▍   | 77/120 [00:00<00:00, 277.43it/s][A
+ 95%|█████████▌| 114/120 [00:00<00:00, 310.83it/s][A100%|██████████| 120/120 [00:00<00:00, 282.23it/s]
+100%|██████████| 1/1 [00:00<00:00,  2.35it/s]100%|██████████| 1/1 [00:00<00:00,  2.35it/s]
+=== 04:11:10 text_sdneg_chair: a red wooden chair
+/usr/local/lib/python3.12/dist-packages/diffusers/utils/deprecation_utils.py:23: FutureWarning: `torch_dtype` is deprecated and will be removed in version 1.0.0. Please use `dtype` instead.
+  deprecate("torch_dtype", "1.0.0", _TORCH_DTYPE_DEPRECATION_MESSAGE)
+Number of points at initialisation :  5000
+[INFO] loading SD...
+[INFO] using hugging face custom model key: sd2-community/stable-diffusion-2-1-base
+Loading pipeline components...:   0%|          | 0/6 [00:00<?, ?it/s]Loading pipeline components...:  33%|███▎      | 2/6 [00:00<00:00,  6.34it/s]
+Loading weights:   0%|          | 0/372 [00:00<?, ?it/s][A
+Loading weights:  45%|████▌     | 168/372 [00:00<00:00, 1679.52it/s][A
+Loading weights:  90%|█████████ | 336/372 [00:00<00:00, 1663.68it/s][ALoading weights: 100%|██████████| 372/372 [00:00<00:00, 1677.13it/s]
+Loading pipeline components...:  67%|██████▋   | 4/6 [00:00<00:00,  6.41it/s]Loading pipeline components...: 100%|██████████| 6/6 [00:00<00:00,  9.14it/s]
+/usr/local/lib/python3.12/dist-packages/huggingface_hub/utils/_validators.py:206: UserWarning: The `local_dir_use_symlinks` argument is deprecated and ignored in `hf_hub_download`. Downloading to a local directory does not use symlinks anymore.
+  warnings.warn(
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[INFO] loaded SD!
+  0%|          | 0/500 [00:00<?, ?it/s]  0%|          | 1/500 [00:00<03:36,  2.31it/s]  0%|          | 2/500 [00:00<02:14,  3.70it/s]  1%|          | 3/500 [00:00<01:48,  4.59it/s]  1%|          | 4/500 [00:00<01:36,  5.15it/s]  1%|          | 5/500 [00:01<01:29,  5.55it/s]  1%|          | 6/500 [00:01<01:25,  5.81it/s]  1%|▏         | 7/500 [00:01<01:22,  5.99it/s]  2%|▏         | 8/500 [00:01<01:20,  6.11it/s]  2%|▏         | 9/500 [00:01<01:19,  6.21it/s]  2%|▏         | 10/500 [00:01<01:18,  6.27it/s]  2%|▏         | 11/500 [00:01<01:17,  6.31it/s]  2%|▏         | 12/500 [00:02<01:17,  6.30it/s]  3%|▎         | 13/500 [00:02<01:17,  6.31it/s]  3%|▎         | 14/500 [00:02<01:16,  6.33it/s]  3%|▎         | 15/500 [00:02<01:16,  6.35it/s]  3%|▎         | 16/500 [00:02<01:16,  6.37it/s]  3%|▎         | 17/500 [00:02<01:15,  6.38it/s]  4%|▎         | 18/500 [00:03<01:15,  6.39it/s]  4%|▍         | 19/500 [00:09<16:57,  2.12s/it] 13%|█▎        | 67/500 [00:09<00:44,  9.78it/s] 15%|█▌        | 75/500 [00:11<00:48,  8.85it/s] 16%|█▌        | 81/500 [00:12<00:50,  8.25it/s] 17%|█▋        | 85/500 [00:12<00:53,  7.80it/s] 18%|█▊        | 89/500 [00:13<00:47,  8.69it/s] 18%|█▊        | 92/500 [00:13<00:49,  8.19it/s] 19%|█▉        | 94/500 [00:13<00:51,  7.88it/s] 19%|█▉        | 96/500 [00:14<00:53,  7.60it/s] 20%|█▉        | 98/500 [00:14<00:54,  7.31it/s] 20%|██        | 100/500 [00:14<00:57,  7.00it/s] 20%|██        | 101/500 [00:15<00:57,  6.88it/s] 20%|██        | 102/500 [00:15<00:58,  6.79it/s] 21%|██        | 103/500 [00:15<00:59,  6.70it/s] 21%|██        | 104/500 [00:15<00:59,  6.61it/s] 21%|██        | 105/500 [00:15<01:00,  6.52it/s] 21%|██        | 106/500 [00:15<01:01,  6.45it/s] 21%|██▏       | 107/500 [00:22<12:23,  1.89s/it] 24%|██▍       | 121/500 [00:24<02:42,  2.34it/s] 34%|███▍      | 169/500 [00:24<00:28, 11.56it/s] 36%|███▌      | 179/500 [00:26<00:32,  9.86it/s] 37%|███▋      | 186/500 [00:27<00:35,  8.95it/s] 38%|███▊      | 191/500 [00:28<00:32,  9.57it/s] 39%|███▉      | 195/500 [00:28<00:34,  8.90it/s] 40%|███▉      | 198/500 [00:29<00:35,  8.45it/s] 40%|████      | 201/500 [00:29<00:37,  7.91it/s] 41%|████      | 203/500 [00:29<00:38,  7.62it/s] 41%|████      | 205/500 [00:30<00:40,  7.37it/s] 41%|████▏     | 207/500 [00:30<00:41,  7.14it/s] 42%|████▏     | 209/500 [00:30<00:41,  6.95it/s] 42%|████▏     | 210/500 [00:31<00:42,  6.86it/s] 42%|████▏     | 211/500 [00:31<00:42,  6.74it/s] 42%|████▏     | 212/500 [00:31<00:43,  6.62it/s] 43%|████▎     | 213/500 [00:31<00:44,  6.50it/s] 43%|████▎     | 214/500 [00:31<00:44,  6.40it/s] 43%|████▎     | 215/500 [00:31<00:44,  6.38it/s] 43%|████▎     | 216/500 [00:32<00:44,  6.36it/s] 43%|████▎     | 217/500 [00:32<00:44,  6.31it/s] 44%|████▎     | 218/500 [00:32<00:44,  6.30it/s] 44%|████▍     | 219/500 [00:32<00:44,  6.30it/s] 44%|████▍     | 220/500 [00:32<00:44,  6.30it/s] 44%|████▍     | 221/500 [00:32<00:44,  6.30it/s] 44%|████▍     | 222/500 [00:33<00:44,  6.28it/s] 45%|████▍     | 223/500 [00:33<00:44,  6.20it/s] 45%|████▌     | 227/500 [00:33<00:24, 11.14it/s] 46%|████▌     | 229/500 [00:33<00:31,  8.53it/s] 46%|████▌     | 230/500 [00:33<00:34,  7.80it/s] 46%|████▌     | 231/500 [00:34<00:37,  7.24it/s] 46%|████▋     | 232/500 [00:34<00:39,  6.85it/s] 47%|████▋     | 233/500 [00:34<00:40,  6.53it/s] 47%|████▋     | 234/500 [00:34<00:42,  6.31it/s] 47%|████▋     | 235/500 [00:34<00:43,  6.15it/s] 47%|████▋     | 236/500 [00:34<00:43,  6.04it/s] 47%|████▋     | 237/500 [00:35<00:44,  5.94it/s] 48%|████▊     | 238/500 [00:35<00:44,  5.90it/s] 48%|████▊     | 239/500 [00:35<00:44,  5.87it/s] 48%|████▊     | 240/500 [00:35<00:44,  5.82it/s] 48%|████▊     | 241/500 [00:35<00:44,  5.82it/s] 48%|████▊     | 242/500 [00:35<00:44,  5.84it/s] 49%|████▊     | 243/500 [00:36<00:43,  5.85it/s] 49%|████▉     | 244/500 [00:36<00:43,  5.92it/s] 49%|████▉     | 245/500 [00:36<00:42,  6.03it/s] 49%|████▉     | 246/500 [00:36<00:41,  6.11it/s] 49%|████▉     | 247/500 [00:36<00:41,  6.17it/s] 50%|████▉     | 248/500 [00:36<00:40,  6.21it/s] 50%|████▉     | 249/500 [00:37<00:40,  6.22it/s] 50%|█████     | 250/500 [00:37<00:41,  6.00it/s] 50%|█████     | 251/500 [00:37<00:41,  6.05it/s] 50%|█████     | 252/500 [00:37<00:40,  6.10it/s] 51%|█████     | 253/500 [00:37<00:40,  6.16it/s] 51%|█████     | 254/500 [00:37<00:39,  6.20it/s] 51%|█████     | 255/500 [00:38<00:39,  6.19it/s] 51%|█████     | 256/500 [00:44<08:37,  2.12s/it] 58%|█████▊    | 290/500 [00:49<00:57,  3.64it/s] 58%|█████▊    | 291/500 [00:49<00:56,  3.70it/s] 65%|██████▍   | 323/500 [00:54<00:34,  5.16it/s] 71%|███████▏  | 357/500 [00:59<00:24,  5.84it/s] 78%|███████▊  | 391/500 [01:04<00:17,  6.18it/s] 85%|████████▌ | 425/500 [01:09<00:11,  6.39it/s] 92%|█████████▏| 459/500 [01:14<00:06,  6.50it/s] 95%|█████████▌| 475/500 [01:17<00:03,  6.56it/s] 99%|█████████▊| 493/500 [01:19<00:01,  6.62it/s]100%|██████████| 500/500 [01:14<00:00,  6.76it/s]
+/usr/local/lib/python3.12/dist-packages/torch/functional.py:505: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at /pytorch/aten/src/ATen/native/TensorShape.cpp:4381.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+[INFO] save model to logs/text_sdneg_chair_model.ply.
+Tensor occ torch.Size([128, 128, 128]) torch.float32 cuda:0 ∈ [0.0, 385.44970703125] μ = 3.3131284713745117 σ = 
+14.210400581359863
+/workspace/generative-3d-gaussians/dreamgaussian/mesh.py:348: UserWarning: Using torch.cross without specifying the dim arg is deprecated.
+Please either pass the dim explicitly or simply use torch.linalg.cross.
+The default value of dim will change to agree with that of linalg.cross in a future release. (Triggered internally at /pytorch/aten/src/ATen/native/Cross.cpp:63.)
+  face_normals = torch.cross(v1 - v0, v2 - v0)
+[INFO] mesh cleaning: (45938, 3) --> (34718, 3), (91816, 3) --> (69440, 3)
+[INFO] marching cubes result: torch.Size([34718, 3]) (-0.8436123132705688-0.9188662767410278), torch.Size([69440, 3])
+[INFO] unwrap uv...
+[INFO] save model to logs/text_sdneg_chair_mesh.obj.
+/workspace/generative-3d-gaussians/dreamgaussian/mesh.py:348: UserWarning: Using torch.cross without specifying the dim arg is deprecated.
+Please either pass the dim explicitly or simply use torch.linalg.cross.
+The default value of dim will change to agree with that of linalg.cross in a future release. (Triggered internally at /pytorch/aten/src/ATen/native/Cross.cpp:63.)
+  face_normals = torch.cross(v1 - v0, v2 - v0)
+/usr/local/lib/python3.12/dist-packages/diffusers/utils/deprecation_utils.py:23: FutureWarning: `torch_dtype` is deprecated and will be removed in version 1.0.0. Please use `dtype` instead.
+  deprecate("torch_dtype", "1.0.0", _TORCH_DTYPE_DEPRECATION_MESSAGE)
+[load_obj] use texture from: logs/text_sdneg_chair_mesh_albedo.png
+[load_obj] load texture: (1024, 1024, 3)
+[Mesh loading] v: torch.Size([41662, 3]), f: torch.Size([69440, 3])
+[Mesh loading] vn: torch.Size([41662, 3]), fn: torch.Size([69440, 3])
+[INFO] loading SD...
+[INFO] using hugging face custom model key: sd2-community/stable-diffusion-2-1-base
+Loading pipeline components...:   0%|          | 0/6 [00:00<?, ?it/s]
+Loading weights:   0%|          | 0/372 [00:00<?, ?it/s][A
+Loading weights:  45%|████▌     | 169/372 [00:00<00:00, 1686.93it/s][A
+Loading weights:  92%|█████████▏| 344/372 [00:00<00:00, 1712.37it/s][ALoading weights: 100%|██████████| 372/372 [00:00<00:00, 1723.85it/s]
+Loading pipeline components...:  50%|█████     | 3/6 [00:00<00:00,  8.23it/s]Loading pipeline components...: 100%|██████████| 6/6 [00:00<00:00,  9.13it/s]Loading pipeline components...: 100%|██████████| 6/6 [00:00<00:00,  8.98it/s]
+/usr/local/lib/python3.12/dist-packages/huggingface_hub/utils/_validators.py:206: UserWarning: The `local_dir_use_symlinks` argument is deprecated and ignored in `hf_hub_download`. Downloading to a local directory does not use symlinks anymore.
+  warnings.warn(
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[INFO] loaded SD!
+  0%|          | 0/50 [00:00<?, ?it/s]  2%|▏         | 1/50 [00:00<00:13,  3.60it/s]  4%|▍         | 2/50 [00:00<00:22,  2.14it/s]  6%|▌         | 3/50 [00:01<00:25,  1.88it/s]  8%|▊         | 4/50 [00:02<00:25,  1.78it/s] 10%|█         | 5/50 [00:02<00:25,  1.74it/s] 12%|█▏        | 6/50 [00:03<00:25,  1.72it/s] 14%|█▍        | 7/50 [00:03<00:24,  1.73it/s] 16%|█▌        | 8/50 [00:04<00:24,  1.75it/s] 18%|█▊        | 9/50 [00:04<00:23,  1.75it/s] 22%|██▏       | 11/50 [00:05<00:17,  2.17it/s] 24%|██▍       | 12/50 [00:06<00:18,  2.05it/s] 26%|██▌       | 13/50 [00:06<00:18,  1.97it/s] 28%|██▊       | 14/50 [00:07<00:18,  1.93it/s] 30%|███       | 15/50 [00:07<00:18,  1.94it/s] 32%|███▏      | 16/50 [00:08<00:17,  1.94it/s] 34%|███▍      | 17/50 [00:08<00:16,  1.94it/s] 36%|███▌      | 18/50 [00:09<00:16,  1.95it/s] 38%|███▊      | 19/50 [00:09<00:15,  1.97it/s] 42%|████▏     | 21/50 [00:10<00:10,  2.70it/s] 44%|████▍     | 22/50 [00:10<00:10,  2.55it/s] 46%|████▌     | 23/50 [00:11<00:11,  2.45it/s] 48%|████▊     | 24/50 [00:11<00:10,  2.37it/s] 50%|█████     | 25/50 [00:12<00:10,  2.32it/s] 52%|█████▏    | 26/50 [00:12<00:10,  2.27it/s] 54%|█████▍    | 27/50 [00:12<00:09,  2.32it/s] 56%|█████▌    | 28/50 [00:13<00:09,  2.36it/s] 58%|█████▊    | 29/50 [00:13<00:08,  2.38it/s] 60%|██████    | 30/50 [00:14<00:08,  2.39it/s] 62%|██████▏   | 31/50 [00:14<00:07,  2.41it/s] 64%|██████▍   | 32/50 [00:21<00:42,  2.36s/it] 76%|███████▌  | 38/50 [00:23<00:10,  1.10it/s] 98%|█████████▊| 49/50 [00:26<00:00,  2.03it/s]100%|██████████| 50/50 [00:19<00:00,  2.52it/s]
+[INFO] save model to logs/text_sdneg_chair.obj.
+[INFO] load obj mesh: use texture from: logs/text_sdneg_chair_albedo.png
+[INFO] load obj mesh: load texture: (1024, 1024, 3)
+[INFO] load mesh, v: torch.Size([41662, 3]), f: torch.Size([69440, 3])
+[INFO] load mesh, vn: torch.Size([41662, 3]), fn: torch.Size([69440, 3])
+[INFO] load mesh, vt: torch.Size([41662, 2]), ft: torch.Size([69440, 3])
+  0%|          | 0/1 [00:00<?, ?it/s]
+  0%|          | 0/120 [00:00<?, ?it/s][A
+ 10%|█         | 12/120 [00:00<00:00, 117.91it/s][A
+ 42%|████▏     | 50/120 [00:00<00:00, 270.58it/s][A
+ 72%|███████▏  | 86/120 [00:00<00:00, 311.18it/s][A100%|██████████| 120/120 [00:00<00:00, 302.15it/s]
+100%|██████████| 1/1 [00:00<00:00,  2.52it/s]100%|██████████| 1/1 [00:00<00:00,  2.52it/s]
+=== 04:13:27 text_sdneg_teapot: a teapot
+/usr/local/lib/python3.12/dist-packages/diffusers/utils/deprecation_utils.py:23: FutureWarning: `torch_dtype` is deprecated and will be removed in version 1.0.0. Please use `dtype` instead.
+  deprecate("torch_dtype", "1.0.0", _TORCH_DTYPE_DEPRECATION_MESSAGE)
+Number of points at initialisation :  5000
+[INFO] loading SD...
+[INFO] using hugging face custom model key: sd2-community/stable-diffusion-2-1-base
+Loading pipeline components...:   0%|          | 0/6 [00:00<?, ?it/s]Loading pipeline components...:  17%|█▋        | 1/6 [00:00<00:01,  3.53it/s]
+Loading weights:   0%|          | 0/372 [00:00<?, ?it/s][A
+Loading weights:  43%|████▎     | 161/372 [00:00<00:00, 1609.07it/s][A
+Loading weights:  91%|█████████ | 338/372 [00:00<00:00, 1686.57it/s][ALoading weights: 100%|██████████| 372/372 [00:00<00:00, 1703.52it/s]
+Loading pipeline components...: 100%|██████████| 6/6 [00:00<00:00, 10.09it/s]Loading pipeline components...: 100%|██████████| 6/6 [00:00<00:00,  9.23it/s]
+/usr/local/lib/python3.12/dist-packages/huggingface_hub/utils/_validators.py:206: UserWarning: The `local_dir_use_symlinks` argument is deprecated and ignored in `hf_hub_download`. Downloading to a local directory does not use symlinks anymore.
+  warnings.warn(
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[INFO] loaded SD!
+  0%|          | 0/500 [00:00<?, ?it/s]  0%|          | 1/500 [00:00<04:19,  1.92it/s]  0%|          | 2/500 [00:00<02:32,  3.27it/s]  1%|          | 3/500 [00:07<26:38,  3.22s/it]  8%|▊         | 38/500 [00:12<02:05,  3.69it/s] 15%|█▍        | 73/500 [00:17<01:24,  5.08it/s] 20%|██        | 102/500 [00:21<01:10,  5.67it/s] 21%|██▏       | 107/500 [00:22<01:08,  5.74it/s] 28%|██▊       | 141/500 [00:27<00:58,  6.18it/s] 35%|███▌      | 176/500 [00:32<00:50,  6.45it/s] 42%|████▏     | 210/500 [00:37<00:44,  6.58it/s] 49%|████▉     | 244/500 [00:42<00:38,  6.66it/s] 56%|█████▌    | 279/500 [00:47<00:32,  6.73it/s] 58%|█████▊    | 288/500 [00:48<00:31,  6.76it/s] 63%|██████▎   | 313/500 [00:52<00:27,  6.79it/s] 70%|██████▉   | 348/500 [00:57<00:22,  6.83it/s] 76%|███████▋  | 382/500 [01:02<00:17,  6.84it/s] 83%|████████▎ | 416/500 [01:07<00:12,  6.84it/s] 90%|█████████ | 450/500 [01:12<00:07,  6.83it/s] 95%|█████████▌| 475/500 [01:16<00:03,  6.83it/s] 97%|█████████▋| 485/500 [01:17<00:02,  6.82it/s]100%|██████████| 500/500 [01:12<00:00,  6.85it/s]
+/usr/local/lib/python3.12/dist-packages/torch/functional.py:505: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at /pytorch/aten/src/ATen/native/TensorShape.cpp:4381.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+[INFO] save model to logs/text_sdneg_teapot_model.ply.
+Tensor occ torch.Size([128, 128, 128]) torch.float32 cuda:0 ∈ [0.0, 489.09747314453125] μ = 5.112564563751221 σ = 
+15.184603691101074
+/workspace/generative-3d-gaussians/dreamgaussian/mesh.py:348: UserWarning: Using torch.cross without specifying the dim arg is deprecated.
+Please either pass the dim explicitly or simply use torch.linalg.cross.
+The default value of dim will change to agree with that of linalg.cross in a future release. (Triggered internally at /pytorch/aten/src/ATen/native/Cross.cpp:63.)
+  face_normals = torch.cross(v1 - v0, v2 - v0)
+[INFO] mesh cleaning: (61054, 3) --> (46358, 3), (122080, 3) --> (92716, 3)
+[INFO] marching cubes result: torch.Size([46358, 3]) (-0.910963773727417-0.8863034844398499), torch.Size([92716, 3])
+[INFO] unwrap uv...
+[INFO] save model to logs/text_sdneg_teapot_mesh.obj.
+/workspace/generative-3d-gaussians/dreamgaussian/mesh.py:348: UserWarning: Using torch.cross without specifying the dim arg is deprecated.
+Please either pass the dim explicitly or simply use torch.linalg.cross.
+The default value of dim will change to agree with that of linalg.cross in a future release. (Triggered internally at /pytorch/aten/src/ATen/native/Cross.cpp:63.)
+  face_normals = torch.cross(v1 - v0, v2 - v0)
+/usr/local/lib/python3.12/dist-packages/diffusers/utils/deprecation_utils.py:23: FutureWarning: `torch_dtype` is deprecated and will be removed in version 1.0.0. Please use `dtype` instead.
+  deprecate("torch_dtype", "1.0.0", _TORCH_DTYPE_DEPRECATION_MESSAGE)
+[load_obj] use texture from: logs/text_sdneg_teapot_mesh_albedo.png
+[load_obj] load texture: (1024, 1024, 3)
+[Mesh loading] v: torch.Size([52944, 3]), f: torch.Size([92716, 3])
+[Mesh loading] vn: torch.Size([52944, 3]), fn: torch.Size([92716, 3])
+[INFO] loading SD...
+[INFO] using hugging face custom model key: sd2-community/stable-diffusion-2-1-base
+Loading pipeline components...:   0%|          | 0/6 [00:00<?, ?it/s]
+Loading weights:   0%|          | 0/372 [00:00<?, ?it/s][A
+Loading weights:  47%|████▋     | 174/372 [00:00<00:00, 1720.50it/s][A
+Loading weights:  93%|█████████▎| 347/372 [00:00<00:00, 1631.83it/s][ALoading weights: 100%|██████████| 372/372 [00:00<00:00, 1664.74it/s]
+Loading pipeline components...:  67%|██████▋   | 4/6 [00:00<00:00, 11.64it/s]Loading pipeline components...: 100%|██████████| 6/6 [00:00<00:00,  8.67it/s]Loading pipeline components...: 100%|██████████| 6/6 [00:00<00:00,  9.13it/s]
+/usr/local/lib/python3.12/dist-packages/huggingface_hub/utils/_validators.py:206: UserWarning: The `local_dir_use_symlinks` argument is deprecated and ignored in `hf_hub_download`. Downloading to a local directory does not use symlinks anymore.
+  warnings.warn(
+[INFO] loaded SD!
+  0%|          | 0/50 [00:00<?, ?it/s]  2%|▏         | 1/50 [00:00<00:37,  1.30it/s]  6%|▌         | 3/50 [00:01<00:21,  2.18it/s]  8%|▊         | 4/50 [00:02<00:23,  1.97it/s] 10%|█         | 5/50 [00:02<00:24,  1.86it/s] 12%|█▏        | 6/50 [00:03<00:24,  1.79it/s] 14%|█▍        | 7/50 [00:03<00:23,  1.80it/s] 16%|█▌        | 8/50 [00:04<00:23,  1.80it/s] 18%|█▊        | 9/50 [00:04<00:22,  1.80it/s] 20%|██        | 10/50 [00:05<00:22,  1.80it/s] 24%|██▍       | 12/50 [00:06<00:16,  2.25it/s] 26%|██▌       | 13/50 [00:06<00:17,  2.10it/s] 28%|██▊       | 14/50 [00:07<00:17,  2.02it/s] 30%|███       | 15/50 [00:07<00:17,  2.00it/s] 32%|███▏      | 16/50 [00:08<00:17,  1.99it/s] 34%|███▍      | 17/50 [00:08<00:16,  1.99it/s] 36%|███▌      | 18/50 [00:08<00:13,  2.44it/s] 38%|███▊      | 19/50 [00:09<00:13,  2.28it/s] 40%|████      | 20/50 [00:09<00:13,  2.25it/s] 42%|████▏     | 21/50 [00:10<00:13,  2.22it/s] 44%|████▍     | 22/50 [00:10<00:11,  2.52it/s] 46%|████▌     | 23/50 [00:11<00:11,  2.38it/s] 48%|████▊     | 24/50 [00:11<00:11,  2.31it/s] 50%|█████     | 25/50 [00:12<00:10,  2.27it/s] 52%|█████▏    | 26/50 [00:12<00:10,  2.25it/s] 54%|█████▍    | 27/50 [00:12<00:10,  2.30it/s] 56%|█████▌    | 28/50 [00:13<00:09,  2.33it/s] 58%|█████▊    | 29/50 [00:13<00:08,  2.36it/s] 60%|██████    | 30/50 [00:14<00:08,  2.38it/s] 62%|██████▏   | 31/50 [00:14<00:08,  2.35it/s] 64%|██████▍   | 32/50 [00:14<00:07,  2.36it/s] 66%|██████▌   | 33/50 [00:15<00:07,  2.39it/s] 68%|██████▊   | 34/50 [00:15<00:06,  2.50it/s] 72%|███████▏  | 36/50 [00:15<00:03,  3.78it/s] 74%|███████▍  | 37/50 [00:16<00:03,  3.48it/s] 76%|███████▌  | 38/50 [00:16<00:03,  3.27it/s] 78%|███████▊  | 39/50 [00:17<00:03,  3.13it/s] 80%|████████  | 40/50 [00:17<00:03,  3.16it/s] 82%|████████▏ | 41/50 [00:17<00:02,  3.18it/s] 84%|████████▍ | 42/50 [00:17<00:02,  3.20it/s] 86%|████████▌ | 43/50 [00:18<00:02,  3.20it/s] 88%|████████▊ | 44/50 [00:18<00:01,  3.21it/s] 90%|█████████ | 45/50 [00:18<00:01,  3.22it/s] 92%|█████████▏| 46/50 [00:19<00:01,  3.21it/s] 94%|█████████▍| 47/50 [00:19<00:00,  3.32it/s] 96%|█████████▌| 48/50 [00:19<00:00,  3.40it/s] 98%|█████████▊| 49/50 [00:20<00:00,  3.48it/s]100%|██████████| 50/50 [00:20<00:00,  3.58it/s]100%|██████████| 50/50 [00:20<00:00,  2.46it/s]
+[INFO] save model to logs/text_sdneg_teapot.obj.
+[INFO] load obj mesh: use texture from: logs/text_sdneg_teapot_albedo.png
+[INFO] load obj mesh: load texture: (1024, 1024, 3)
+[INFO] load mesh, v: torch.Size([52944, 3]), f: torch.Size([92716, 3])
+[INFO] load mesh, vn: torch.Size([52944, 3]), fn: torch.Size([92716, 3])
+[INFO] load mesh, vt: torch.Size([52944, 2]), ft: torch.Size([92716, 3])
+  0%|          | 0/1 [00:00<?, ?it/s]
+  0%|          | 0/120 [00:00<?, ?it/s][A
+  8%|▊         | 10/120 [00:00<00:01, 99.82it/s][A
+ 39%|███▉      | 47/120 [00:00<00:00, 258.23it/s][A
+ 69%|██████▉   | 83/120 [00:00<00:00, 302.68it/s][A
+ 99%|█████████▉| 119/120 [00:00<00:00, 322.17it/s][A100%|██████████| 120/120 [00:00<00:00, 294.61it/s]
+100%|██████████| 1/1 [00:00<00:00,  2.45it/s]100%|██████████| 1/1 [00:00<00:00,  2.45it/s]
+=== 04:15:52 done
