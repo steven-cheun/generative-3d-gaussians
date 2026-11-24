@@ -57,3 +57,9 @@ Every change to shared code: date, who, what, why.
 ## 2026-11-23 — Steven (code written with Claude) (2)
 - main.py, main2.py, configs/text.yaml: new option `hf_key` for text-to-3D. It loads Stable Diffusion from another Hugging Face repo, because the official stabilityai/stable-diffusion-2-1-base has been removed. Empty (the default) keeps the original behaviour. Image runs are unchanged (they don't load Stable Diffusion).
 - configs/text.yaml: added `seed: 0`, as in image.yaml, so text runs repeat.
+
+## 2026-11-23 — Steven (code written with Claude) (3)
+- guidance/mvdream_utils.py: MVDream loads its scheduler settings from the community mirror `sd2-community/stable-diffusion-2-1-base`, because the official stabilityai repo was removed. Only the scheduler settings come from there; the MVDream model itself downloads from MVDream/MVDream as before.
+- configs/text_mv.yaml: added `seed: 0`, as in image.yaml and text.yaml.
+- Container: MVDream installed with `pip install -c docker/constraints.txt git+https://github.com/bytedance/MVDream` (not in the Dockerfile yet).
+- scripts/run_text3d.sh (new): text-to-3D for 4 prompts in three settings (sd, sdneg, mv) -> dreamgaussian/logs/text_<setting>_<name>.mp4.

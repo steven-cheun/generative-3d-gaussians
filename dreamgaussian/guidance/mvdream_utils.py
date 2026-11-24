@@ -36,8 +36,10 @@ class MVDream(nn.Module):
 
         self.embeddings = {}
 
+        # only the scheduler settings come from SD 2.1-base; the official repo was removed,
+        # so they load from the community mirror
         self.scheduler = DDIMScheduler.from_pretrained(
-            "stabilityai/stable-diffusion-2-1-base", subfolder="scheduler", torch_dtype=self.dtype
+            "sd2-community/stable-diffusion-2-1-base", subfolder="scheduler", torch_dtype=self.dtype
         )
 
     @torch.no_grad()
