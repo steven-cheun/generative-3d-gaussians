@@ -1,0 +1,148 @@
+=== Tue Nov 24 01:31:49 UTC 2026 start 2V-c
+42 runs (14 images x seeds [0, 1, 2]) | tag=gso_2vc | commit=5ff6b64
+Idle GPU memory before runs: 1262 MiB | outputs: dreamgaussian/logs/gso_2vc/ | log: /workspace/generative-3d-gaussians/results/gso_2vc_log.csv
+[1/42] android seed 0 ... ok | 78.7 s | 30148 Gaussians
+[2/42] android seed 1 ... ok | 70.4 s | 30981 Gaussians
+[3/42] android seed 2 ... ok | 71.6 s | 29952 Gaussians
+[4/42] cartridge seed 0 ... ok | 69.5 s | 38611 Gaussians
+[5/42] cartridge seed 1 ... ok | 70.8 s | 37817 Gaussians
+[6/42] cartridge seed 2 ... ok | 68.6 s | 38791 Gaussians
+[7/42] cats seed 0 ... ok | 60.5 s | 31448 Gaussians
+[8/42] cats seed 1 ... ok | 61.1 s | 33102 Gaussians
+[9/42] cats seed 2 ... ok | 61.6 s | 33550 Gaussians
+[10/42] cups seed 0 ... ok | 60.6 s | 21037 Gaussians
+[11/42] cups seed 1 ... ok | 59.5 s | 21227 Gaussians
+[12/42] cups seed 2 ... ok | 60.0 s | 20263 Gaussians
+[13/42] giraffe seed 0 ... ok | 68.4 s | 46367 Gaussians
+[14/42] giraffe seed 1 ... ok | 67.5 s | 51628 Gaussians
+[15/42] giraffe seed 2 ... ok | 67.4 s | 49125 Gaussians
+[16/42] headset_box seed 0 ... ok | 79.7 s | 43615 Gaussians
+[17/42] headset_box seed 1 ... ok | 83.7 s | 43849 Gaussians
+[18/42] headset_box seed 2 ... ok | 80.1 s | 44385 Gaussians
+[19/42] horse seed 0 ... ok | 60.7 s | 32250 Gaussians
+[20/42] horse seed 1 ... ok | 59.6 s | 30495 Gaussians
+[21/42] horse seed 2 ... ok | 61.0 s | 30571 Gaussians
+[22/42] lion seed 0 ... ok | 63.2 s | 40006 Gaussians
+[23/42] lion seed 1 ... ok | 62.7 s | 39622 Gaussians
+[24/42] lion seed 2 ... ok | 64.3 s | 41683 Gaussians
+[25/42] orca seed 0 ... ok | 61.0 s | 24345 Gaussians
+[26/42] orca seed 1 ... ok | 61.4 s | 23157 Gaussians
+[27/42] orca seed 2 ... ok | 60.5 s | 23996 Gaussians
+[28/42] shark seed 0 ... ok | 62.3 s | 37544 Gaussians
+[29/42] shark seed 1 ... ok | 62.0 s | 37987 Gaussians
+[30/42] shark seed 2 ... ok | 61.9 s | 40039 Gaussians
+[31/42] squirrel seed 0 ... ok | 68.7 s | 46635 Gaussians
+[32/42] squirrel seed 1 ... ok | 68.8 s | 49261 Gaussians
+[33/42] squirrel seed 2 ... ok | 70.6 s | 49276 Gaussians
+[34/42] trex seed 0 ... ok | 59.7 s | 29063 Gaussians
+[35/42] trex seed 1 ... ok | 60.0 s | 30325 Gaussians
+[36/42] trex seed 2 ... ok | 60.0 s | 28390 Gaussians
+[37/42] turtle seed 0 ... ok | 70.7 s | 44912 Gaussians
+[38/42] turtle seed 1 ... ok | 69.8 s | 48773 Gaussians
+[39/42] turtle seed 2 ... ok | 70.1 s | 46986 Gaussians
+[40/42] yoshi seed 0 ... ok | 62.0 s | 37145 Gaussians
+[41/42] yoshi seed 1 ... ok | 63.4 s | 39786 Gaussians
+[42/42] yoshi seed 2 ... ok | 62.4 s | 37123 Gaussians
+Done. Results: /workspace/generative-3d-gaussians/results/gso_2vc_log.csv
+android seed=0  clip_sim=0.7112  (15.0s, ok)
+android seed=1  clip_sim=0.7157  (14.4s, ok)
+android seed=2  clip_sim=0.7218  (8.4s, ok)
+cartridge seed=0  clip_sim=0.5895  (7.5s, ok)
+cartridge seed=1  clip_sim=0.5743  (7.6s, ok)
+cartridge seed=2  clip_sim=0.5893  (7.1s, ok)
+cats seed=0  clip_sim=0.7192  (7.6s, ok)
+cats seed=1  clip_sim=0.6932  (7.3s, ok)
+cats seed=2  clip_sim=0.7201  (7.7s, ok)
+cups seed=0  clip_sim=0.8779  (7.3s, ok)
+cups seed=1  clip_sim=0.8692  (7.7s, ok)
+cups seed=2  clip_sim=0.8871  (7.0s, ok)
+giraffe seed=0  clip_sim=0.7148  (8.0s, ok)
+giraffe seed=1  clip_sim=0.6983  (7.7s, ok)
+giraffe seed=2  clip_sim=0.7158  (7.9s, ok)
+headset_box seed=0  clip_sim=0.5034  (8.2s, ok)
+headset_box seed=1  clip_sim=0.5022  (7.6s, ok)
+headset_box seed=2  clip_sim=0.4834  (8.3s, ok)
+horse seed=0  clip_sim=0.8147  (7.1s, ok)
+horse seed=1  clip_sim=0.8126  (7.6s, ok)
+horse seed=2  clip_sim=0.834  (7.6s, ok)
+lion seed=0  clip_sim=0.7275  (7.7s, ok)
+lion seed=1  clip_sim=0.71  (7.7s, ok)
+lion seed=2  clip_sim=0.7179  (7.6s, ok)
+orca seed=0  clip_sim=0.8437  (7.0s, ok)
+orca seed=1  clip_sim=0.8175  (7.6s, ok)
+orca seed=2  clip_sim=0.8318  (7.2s, ok)
+shark seed=0  clip_sim=0.8207  (7.7s, ok)
+shark seed=1  clip_sim=0.7962  (7.5s, ok)
+shark seed=2  clip_sim=0.8341  (7.5s, ok)
+squirrel seed=0  clip_sim=0.6786  (7.4s, ok)
+squirrel seed=1  clip_sim=0.6375  (7.8s, ok)
+squirrel seed=2  clip_sim=0.6509  (7.5s, ok)
+trex seed=0  clip_sim=0.781  (7.4s, ok)
+trex seed=1  clip_sim=0.7839  (6.9s, ok)
+trex seed=2  clip_sim=0.7758  (7.5s, ok)
+turtle seed=0  clip_sim=0.7308  (7.8s, ok)
+turtle seed=1  clip_sim=0.7133  (7.9s, ok)
+turtle seed=2  clip_sim=0.7236  (7.4s, ok)
+yoshi seed=0  clip_sim=0.8743  (8.0s, ok)
+yoshi seed=1  clip_sim=0.887  (7.1s, ok)
+yoshi seed=2  clip_sim=0.8673  (7.7s, ok)
+Done -> results/metrics.csv  (42 ok, 0 errors this run)
+Ground truth (scan): width/height, depth/height
+  android      w/h  0.91   d/h  0.20
+  cups         w/h  0.29   d/h  0.29
+  horse        w/h  1.49   d/h  0.37
+  turtle       w/h  1.02   d/h  1.50
+  trex         w/h  2.27   d/h  0.51
+  yoshi        w/h  0.59   d/h  0.54
+  cats         w/h  1.02   d/h  0.43
+  giraffe      w/h  1.03   d/h  1.10
+  cartridge    w/h  0.88   d/h  0.16
+  headset_box  w/h  0.87   d/h  0.46
+  lion         w/h  1.60   d/h  0.57
+  shark        w/h  1.06   d/h  2.41
+  orca         w/h  1.48   d/h  2.85
+  squirrel     w/h  0.72   d/h  1.05
+  -> check: cartridge and headset_box d/h small (thin); shark, orca, turtle d/h large (long)
+
+[baseline] 42 meshes
+[gso_bexact] 42 meshes
+[gso_bpair] 42 meshes
+[gso_2va] 42 meshes
+[gso_2vb] 42 meshes
+[gso_side] 42 meshes
+[gso_2vc] 42 meshes
+-> results/proportions.csv (294 rows)
+
+prop_err (lower = better)  baseline   bexact    bpair      2va      2vb     side      2vc
+ALL                           0.264    0.257    0.218    0.094    0.070    0.188    0.069
+android                       0.522    0.536    0.510    0.165    0.110    0.107    0.109
+cups                          0.031    0.049    0.045    0.069    0.073    0.029    0.071
+horse                         0.070    0.035    0.038    0.047    0.015    0.213    0.021
+turtle                        0.205    0.174    0.103    0.056    0.059    0.067    0.050
+trex                          0.079    0.067    0.096    0.141    0.154    0.737    0.151
+yoshi                         0.252    0.259    0.260    0.075    0.047    0.275    0.040
+cats                          0.215    0.254    0.148    0.050    0.068    0.350    0.060
+giraffe                       0.054    0.067    0.060    0.076    0.067    0.075    0.060
+cartridge                     0.827    0.779    0.705    0.177    0.083    0.109    0.078
+headset_box                   0.414    0.397    0.372    0.122    0.131    0.162    0.129
+lion                          0.014    0.015    0.026    0.052    0.066    0.203    0.102
+shark                         0.403    0.392    0.159    0.124    0.046    0.052    0.046
+orca                          0.464    0.442    0.385    0.094    0.020    0.168    0.012
+squirrel                      0.152    0.138    0.145    0.064    0.041    0.090    0.036
+
+depth ratio (1.00 = right) baseline   bexact    bpair      2va      2vb     side      2vc
+android                        2.80     2.84     2.73     1.38     1.24     0.96     1.23
+cups                           1.00     1.03     1.04     0.93     0.94     1.00     0.94
+horse                          1.12     1.04     1.05     0.94     0.99     0.70     0.97
+turtle                         0.70     0.73     0.92     0.95     0.94     1.00     0.95
+trex                           1.11     1.09     1.15     0.83     0.84     0.28     0.83
+yoshi                          1.53     1.56     1.54     1.07     1.05     1.64     1.04
+cats                           1.52     1.64     1.33     1.06     1.07     0.51     1.05
+giraffe                        0.94     0.92     0.90     0.87     0.89     1.10     0.89
+cartridge                      4.95     4.53     4.06     1.42     1.17     0.89     1.16
+headset_box                    2.11     2.05     1.97     1.23     1.22     0.84     1.22
+lion                           0.98     1.02     1.05     0.98     0.98     0.78     0.93
+shark                          0.46     0.46     0.75     0.85     0.92     1.02     0.92
+orca                           0.42     0.46     0.52     0.86     0.97     0.73     1.00
+squirrel                       0.79     0.82     0.80     0.90     0.93     1.06     0.94
+=== Tue Nov 24 02:21:32 UTC 2026 done
