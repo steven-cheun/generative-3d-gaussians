@@ -81,7 +81,8 @@ class GUI:
                 side_path = self.opt.input.replace("_rgba.png", "_side.png")
             self.side_img, self.side_mask = self.read_rgba(side_path)
         self.zero123_cond = str(self.opt.get("zero123_cond", "front"))
-        assert self.zero123_cond in ("front", "nearest"), f"zero123_cond must be front or nearest, got {self.zero123_cond}"
+        # "random" (2V-c): Zero123 gets one of the two photos, picked at random each step (iFusion's rule, Wu et al. 2023)
+        assert self.zero123_cond in ("front", "nearest", "random"), f"zero123_cond must be front, nearest or random, got {self.zero123_cond}"
         
         # override prompt from cmdline
         if self.opt.prompt is not None:
@@ -219,12 +220,16 @@ class GUI:
                 # two-view (ours), 2V-b: remember Zero123's conditioning for each photo, keyed by azimuth.
                 # get_img_embeds() overwrites guidance.embeddings, so store each result and reset to the front.
                 self.zero123_embs = [(0.0, self.guidance_zero123.embeddings)]
-                if self.zero123_cond == "nearest" and len(self.ref_views) > 1:
-                    assert self.opt.batch_size == 1, "zero123_cond=nearest picks one photo per step: needs batch_size 1"
+                if self.zero123_cond in ("nearest", "random") and len(self.ref_views) > 1:
+                    assert self.opt.batch_size == 1, f"zero123_cond={self.zero123_cond} picks one photo per step: needs batch_size 1"
                     for _, img, _, az in self.ref_views[1:]:
                         self.guidance_zero123.get_img_embeds(img)
                         self.zero123_embs.append((az, self.guidance_zero123.embeddings))
                     self.guidance_zero123.embeddings = self.zero123_embs[0][1]
+                    # 2V-c picks photos with its own random generator, so for a given seed
+                    # the camera angles stay the same as in 2V-a and 2V-b.
+                    seed = self.opt.get("seed", None)
+                    self.cond_rng = np.random.default_rng(int(seed) if str(seed).lstrip("-").isdigit() else None)
 
     def train_step(self):
         starter = torch.cuda.Event(enable_timing=True)
@@ -314,10 +319,14 @@ class GUI:
 
             if self.enable_zero123:
                 zero123_hors = hors
-                if self.zero123_cond == "nearest" and len(self.zero123_embs) > 1:
-                    # 2V-b (ours): condition Zero123 on the photo whose azimuth is closest to this random view.
+                if self.zero123_cond in ("nearest", "random") and len(self.zero123_embs) > 1:
+                    if self.zero123_cond == "nearest":
+                        # 2V-b (ours): condition Zero123 on the photo whose azimuth is closest to this random view.
+                        ref_az, emb = min(self.zero123_embs, key=lambda e: abs(wrap180(hors[0] - e[0])))
+                    else:
+                        # 2V-c: either photo, picked at random, wherever the camera is.
+                        ref_az, emb = self.zero123_embs[self.cond_rng.integers(len(self.zero123_embs))]
                     # Zero123 is told "rotate by x degrees FROM THE PHOTO", so the angle becomes relative to it.
-                    ref_az, emb = min(self.zero123_embs, key=lambda e: abs(wrap180(hors[0] - e[0])))
                     self.guidance_zero123.embeddings = emb
                     zero123_hors = [wrap180(h - ref_az) for h in hors]
                 loss = loss + self.opt.lambda_zero123 * self.guidance_zero123.train_step(images, vers, zero123_hors, radii, step_ratio=step_ratio if self.opt.anneal_timestep else None, default_elevation=self.opt.elevation)
