@@ -132,7 +132,8 @@ class GUI:
             else:
                 print(f"[INFO] loading SD...")
                 from guidance.sd_utils import StableDiffusion
-                self.guidance_sd = StableDiffusion(self.device)
+                # hf_key: load Stable Diffusion from another Hugging Face repo (the official SD 2.1-base was removed)
+                self.guidance_sd = StableDiffusion(self.device, hf_key=self.opt.get("hf_key", None))
                 print(f"[INFO] loaded SD!")
 
         if self.guidance_zero123 is None and self.enable_zero123:

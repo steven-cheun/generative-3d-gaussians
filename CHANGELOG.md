@@ -53,3 +53,7 @@ Every change to shared code: date, who, what, why.
 ## 2026-11-23 — Steven (code written with Claude)
 - main.py: new option `zero123_cond=random` (2V-c). With two photos, Zero123 gets one of them at random each step, and the camera angle is given relative to that photo. This is the rule from iFusion (Wu et al., 2023, arXiv 2312.17250), which reports better-looking new views than with the nearest photo. We compare it with 2V-a (front) and 2V-b (nearest) on shape, using the same photos. The random pick has its own random generator, so for a given seed the camera angles match 2V-a and 2V-b. Baseline, `front` and `nearest` runs are unchanged.
 - scripts/run_2vc.sh (new): runs 2V-c on 14 objects x 3 seeds, then CLIP, then proportion error for all 7 tags (proportions.py rewrites its whole CSV).
+
+## 2026-11-23 — Steven (code written with Claude) (2)
+- main.py, main2.py, configs/text.yaml: new option `hf_key` for text-to-3D. It loads Stable Diffusion from another Hugging Face repo, because the official stabilityai/stable-diffusion-2-1-base has been removed. Empty (the default) keeps the original behaviour. Image runs are unchanged (they don't load Stable Diffusion).
+- configs/text.yaml: added `seed: 0`, as in image.yaml, so text runs repeat.
