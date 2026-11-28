@@ -63,3 +63,6 @@ Every change to shared code: date, who, what, why.
 - configs/text_mv.yaml: added `seed: 0`, as in image.yaml and text.yaml.
 - Container: MVDream installed with `pip install -c docker/constraints.txt git+https://github.com/bytedance/MVDream` (not in the Dockerfile yet).
 - scripts/run_text3d.sh (new): text-to-3D for 4 prompts in three settings (sd, sdneg, mv) -> dreamgaussian/logs/text_<setting>_<name>.mp4.
+
+## 2026-11-27 - Hector
+- notebooks/06_results.ipynb: added 2V-c (`gso_2vc`, random photo for Zero123 each step) to every table and figure (7 conditions). New section 4b checks the report's 2V-c numbers from the CSVs (Table V: 0.069 / 0.071 / 0.086, held-out CLIP 0.777; p bpair -> 2vc 0.017, 2va -> 2vc 0.068; per-angle CLIP; seed std 0.011): all match. Nearest vs random (2vb -> 2vc): 2V-c lower on 11/14 objects, mean change -0.001, p 0.068; only orca's difference (0.020 -> 0.012) clears 2x seed std. Writes figures/table_2v_nearest_vs_random.csv. The claimed tables from 2v-results.md are still checked for the original 6 conditions. CPU only.
